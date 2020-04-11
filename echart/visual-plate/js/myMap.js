@@ -181,7 +181,7 @@
                 width: 0
             },
             effect: {
-                constantSpeed: 20,
+                constantSpeed: 10,
                 show: true,
                 trailLength: 0.1,
                 symbolSize: 1.5
