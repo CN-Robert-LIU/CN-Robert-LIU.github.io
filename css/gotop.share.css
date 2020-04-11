@@ -1,0 +1,22 @@
+#weixinDiv{
+background-color: #FFF;
+border: 1px solid;
+width: 300px;
+height: 300px;
+position: fix;
+top: 50%;
+left: 40%;
+margin:-50px 0 0 -50px;
+}
+#hideWeiXinDiv{
+text-align: center;
+float: right;
+padding-right: 10px;
+padding-top: 2px;
+}
+#qrcode{
+width: 200px;
+height: 200px;
+margin: 0px auto;
+}
+

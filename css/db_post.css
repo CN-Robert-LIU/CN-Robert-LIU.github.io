@@ -1,0 +1,11 @@
+.article-dbpost-column{
+    display: inline
+    fload: true
+    width: calc(50%-10px) /*retian 10px margin*/
+}
+.article-dbpost-column .db-first-column {
+    padding: 0 0px 0 0
+}
+.article-double-column .db-second-column {
+    padding: 0 0 0 0px
+}
