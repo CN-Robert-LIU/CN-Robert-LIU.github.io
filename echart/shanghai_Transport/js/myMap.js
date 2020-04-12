@@ -3,14 +3,14 @@
   var myChart = echarts.init(document.querySelector(".map .chart"));
   //myChart.getModel().getComponent('bmap').getBMap();
   // 2. 指定配置和数据
-  var busLines = []
-  // var indexList = ["1-500","501-1000","1001-1500","1501-2000","2001-2500","2501-3000","3001-3044"]
-  var indexList = ["1-3044"]
+  var indexList = ["1-3044"];
+  // var indexList = ["1-500","501-1000","1001-1500","1501-2000","2001-2500","2501-3000","3001-3044"];
+  console.log("LOAD");
   for (let indexV in indexList) {
-	  //console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json');
-  $.post('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
+    console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json');
+  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
     var hStep = 300 / (data.length - 1);
-    busLines = busLines.concat.apply([], data.map(function (busLine, idx) {
+    var busLines = [].concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
         var points = [];
         for (var i = 0; i < busLine.length; i += 2) {
@@ -34,7 +34,7 @@
             }
         };
     }));
-   console.log("length"+Object.call(busLines)+Object.keys(busLines).length)
+    console.log("length"+Object.call(busLines)+Object.keys(busLines).length);
     myChart.setOption(option = {
         bmap: {
             center: [121.48, 31.25],

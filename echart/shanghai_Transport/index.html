@@ -25,19 +25,7 @@
           var m = dt.getMinutes(); //获取分
           var s = dt.getSeconds(); //获取秒
           document.querySelector(".showTime").innerHTML =
-            "Time:" +
-            y +
-            "-" +
-            mt +
-            "-" +
-            day +
-            "--" +
-            h +
-            ":" +
-            m +
-            ":" +
-            s +
-            ":";
+            "Time:"+y+"-"+mt+"-"+day+"--"+h+":"+m+":"+s;
           t = setTimeout(time, 1000); //设定定时器，循环运行
         }
       </script>
@@ -111,7 +99,8 @@
     <script type="text/javascript" src="https://api.map.baidu.com/getscript?v=2.0&ak=KOmVjPVUAey1G2E8zNhPiuQ6QiEmAwZu&services=&t=20200327103013"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/visual-plate/js/dataTool.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/visual-plate/js/bmap.js"></script>
-    <script type="text-javascript"async src="js/myMap.js"></script>
+    <!-- async -->
+    <script src="js/myMap.js"></script>
     <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </body>
 </html>
