@@ -8,7 +8,7 @@
   var indexList = ["1-3044"]
   for (let indexV in indexList) {
 	  //console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json');
-  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
+  $.post('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
     var hStep = 300 / (data.length - 1);
     busLines = busLines.concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
