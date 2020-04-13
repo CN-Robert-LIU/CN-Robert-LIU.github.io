@@ -23,7 +23,7 @@
 	    }
             prevPt = pt;
 
-            points.push([pt[0] / 1e5, pt[1] / 1e6]);
+            points.push([pt[1] / 1e6, pt[0] / 1e5]);
         }
         return {
             coords: points,
