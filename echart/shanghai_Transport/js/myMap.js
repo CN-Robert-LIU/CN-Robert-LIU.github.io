@@ -16,11 +16,11 @@
         for (var i = 0; i < busLine.length; i += 2) {
             var pt = [busLine[i], busLine[i + 1]];
             if (i > 0) {
-                pt = [
+               /* pt = [
                     prevPt[0] + pt[0],
                     prevPt[1] + pt[1]
-                ];
-            }
+                ];*/
+	    }
             prevPt = pt;
 
             points.push([pt[0] / 1e5, pt[1] / 1e6]);
