@@ -3,7 +3,7 @@
   var myChart = echarts.init(document.querySelector(".map .chart"));
   //myChart.getModel().getComponent('bmap').getBMap();
   // 2. 指定配置和数据
-  var indexList = ["1-3044"];
+  var indexList = ["TotalData-3044"];
   // var indexList = ["1-500","501-1000","1001-1500","1501-2000","2001-2500","2501-3000","3001-3044"];
   console.log("LOAD");
   for (let indexV in indexList) {
@@ -15,15 +15,18 @@
         var points = [];
         for (var i = 0; i < busLine.length; i += 2) {
             var pt = [busLine[i], busLine[i + 1]];
-            if (i > 0) {
-               /* pt = [
+            /*
+	     * if (i > 0) {
+                pt = [
                     prevPt[0] + pt[0],
                     prevPt[1] + pt[1]
-                ];*/
-	    }
+                ];
+	    } else {
+	        console.log([pt[0] / 1e4, pt[1] / 1e4]);
+	    }*/
             prevPt = pt;
 
-            points.push([pt[1] / 1e6, pt[0] / 1e5]);
+            points.push([pt[0] / 1e4, pt[1] / 1e4]);
         }
         return {
             coords: points,

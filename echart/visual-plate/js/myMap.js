@@ -17,7 +17,6 @@
                 ];
             }
             prevPt = pt;
-
             points.push([pt[0] / 1e4, pt[1] / 1e4]);
         }
         return {
