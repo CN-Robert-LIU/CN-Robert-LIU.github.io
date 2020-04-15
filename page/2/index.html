@@ -172,12 +172,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img class="half-header-box mdui-img-fluid" draggable="false">
+        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg" class="header-box mdui-img-fluid" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">Docker</span><br>
-                <!--TODO-->
+                <span class="header_title">Blog for Robert.LIU</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -185,93 +184,53 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    <!-- 归档列表 -->
-
- <!--归档列表 -->
-<div class="mdui-center post-content">
-  <h1>Archives</h1>
-  <div class="mdui-panel" mdui-panel="{accordion : true}">
     
-          <div class="mdui-panel-item">
-            <div class="mdui-panel-item-header">
-              <div class="mdui-panel-item-title" id="2020">2020</div>
-              <div class="mdui-panel-item-summary">共11篇</div>
-              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
+<!--Index-->
+<div class="mdui-center" style="width:95%;max-width:550pt;">
+      <h3>Recent Posts</h3>
+</div>
+
+  <div id="recent-posts" class="mdui-center">
+    
+      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
+        <!--图片或视频部分-->
+        <div class="mdui-card-media">
+          
+            <img class="img_item mdui-img-fluid" src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/HelloWorld.png" onerror="{this.src=''}" draggable="false">
+            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
+              <div class="mdui-card-primary">
+                  <div class="title_font float_left mdui-card-primary-title">Hello World</div>
+              </div>
             </div>
-            <div class="mdui-panel-item-body mdui-typo">
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/ML-Algorisum/">ML-Algorisum</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/Java-Redis/">Java-Redis</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-13
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/13/Tensorflow-SaveAndLoadModel/">Tensorflow-SaveAndLoadModel</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/Java-JVM/">Java-JVM</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/visual-Echarts/">visual-Echarts</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-10
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/10/Java-Concurrent-Lock/">Java-Concurrent-Lock</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/Java-Concurrent-AsyncToSync/">Java-Concurrent-AsyncToSyncActivity</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/docker-build-deploy/">docker-build-deploy</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-08
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/08/mybatis/">mybatis-Introdution</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-07
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/07/git-operation/">git_operation</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-06
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/06/hello-world/">Hello World</a>
-                <hr>
-                
-            </div>
-          </div>
+            
+        </div>
+        <!--描述-->
+        <div class="mdui-card-actions">
+          
+
+          
+          
+          <div class="mdui-divider"></div>
+            <span class="info">
+              <i class="mdui-icon material-icons">access_time</i>
+              2020-04-06
+            </span>
+            
+              <a class="info mdui-text-color-pink " href="/2020/04/06/hello-world/" style="float:right;">去围观</a>
+            
+        </div>
+      </div>
     
   </div>
+
+
+
+<!--页码-->
+<div id="paginator">
+  <a class="extend prev" rel="prev" href="/">&lt;</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
 </div>
-</br></br></br>
+</br>
+
   </div>
   <!--footer-->
   <footer class="mdui-color-indigo">
