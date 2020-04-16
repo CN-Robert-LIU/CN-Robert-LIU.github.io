@@ -222,7 +222,7 @@
       <link href="/2020/04/06/hello-world/"/>
       <url>/2020/04/06/hello-world/</url>
       
-        <content type="html"><![CDATA[<p>To celebrate my first blog, and generate the websited has been built!<br>Conratuation!</p>]]></content>
+        <content type="html"><![CDATA[<div align="center"><p style="color:#3fb573;fontsize:4em">Celebrating my first blog and the websited has been built!</p></div><div align="center"><p style="color:#3fb573;fontsize:4em">Conratuation!</p></div>]]></content>
       
       
       
