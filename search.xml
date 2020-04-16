@@ -4,6 +4,27 @@
   
     
     <entry>
+      <title>IdempotenceOfInterface</title>
+      <link href="/2020/04/16/Idempotence%20Of%20Interface/"/>
+      <url>/2020/04/16/Idempotence%20Of%20Interface/</url>
+      
+        <content type="html"><![CDATA[<h2><span id="gloable-id">Gloable ID</span></h2><p>If existed, which has been executed. Otherwise, storage ID into database and execut task.</p><h3><span id="deduplicate-table">Deduplicate Table</span></h3><p>Put task and write into dumplicate table task into one transaction.</p><h3><span id="insert-or-update">Insert Or Update</span></h3><p>double keys build one index and operate them:</p><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_category (goods_id,category_id,create_time,update_time)</span><br><span class="line"><span class="keyword">values</span>(<span class="comment">#&#123;goodsId&#125;,#&#123;categoryId&#125;,now(),now())</span></span><br><span class="line"><span class="keyword">on</span> <span class="keyword">DUPLICATE</span> <span class="keyword">KEY</span> <span class="keyword">UPDATE</span></span><br><span class="line">update_time=<span class="keyword">now</span>()</span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">insertOrUpdate</span><span class="params">(<span class="keyword">int</span> goodsid,<span class="keyword">int</span> categoryId)</span></span></span><br></pre></td></tr></table></figure><h3><span id="multi-version-control">Multi Version Control</span></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> goods <span class="keyword">set</span> <span class="keyword">name</span>=<span class="comment">#&#123;newName&#125;,version=#&#123;version&#125; where id=#&#123;id&#125; and version&lt;#&#123;version&#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">updateGoodsName</span><span class="params">(<span class="keyword">int</span> id,String newName,<span class="keyword">int</span> version)</span></span></span><br></pre></td></tr></table></figure><h3><span id="status-machine">Status Machine</span></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">order</span> <span class="keyword">set</span> <span class="keyword">status</span>=<span class="comment">#&#123;status&#125; where id=#&#123;id&#125; and status&lt;#&#123;status&#125;</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//such as: status=0,generate;status=1,create error;status=2,complete;</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">updateOrder</span><span class="params">(<span class="keyword">int</span> id,<span class="keyword">int</span> status)</span></span></span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> Java </tag>
+            
+            <tag> Mysql </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ML-Algorisum</title>
       <link href="/2020/04/15/ML-Algorisum/"/>
       <url>/2020/04/15/ML-Algorisum/</url>

@@ -198,6 +198,7 @@
 
 <h2><span id="2load-model-which-has-been-trained-completed">2.Load model which has been trained completed</span></h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Generate network model(graph/network)</span></span><br><span class="line">loader = tf.train.import_meta_graph(<span class="string">'test_model_name-1000.meta'</span>)</span><br><span class="line"><span class="comment"># Load Parameter</span></span><br><span class="line"><span class="keyword">with</span> tf.Session <span class="keyword">as</span> sess:</span><br><span class="line">    new_saver = tf.train.import_meta_graph(<span class="string">'test_model_name-1000.meta'</span>)</span><br><span class="line">    <span class="comment"># default check point at py file's same directory</span></span><br><span class="line">    new_saver.restore(sess,tf.train.latest_checkpoint(<span class="string">'./'</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># Model would be restored. Above statement will print the saved value of w1 variable</span></span><br></pre></td></tr></table></figure>
 
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
     </article>
     <div class="article-content mdui-container mdui-center mdui-shadow-12">
       
