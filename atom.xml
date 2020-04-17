@@ -36,10 +36,6 @@
     
     
     
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="Mysql" scheme="https://www.robert-liu-designer.tk/tags/Mysql/"/>
-    
   </entry>
   
   <entry>
@@ -58,8 +54,6 @@
     </summary>
     
     
-    
-      <category term="ML" scheme="https://www.robert-liu-designer.tk/tags/ML/"/>
     
   </entry>
   
@@ -82,10 +76,6 @@
     </summary>
     
     
-    
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="Redis" scheme="https://www.robert-liu-designer.tk/tags/Redis/"/>
     
   </entry>
   
@@ -110,14 +100,6 @@
     
     
     
-      <category term="ML" scheme="https://www.robert-liu-designer.tk/tags/ML/"/>
-    
-      <category term="Python" scheme="https://www.robert-liu-designer.tk/tags/Python/"/>
-    
-      <category term="Tool" scheme="https://www.robert-liu-designer.tk/tags/Tool/"/>
-    
-      <category term="Tensorflow" scheme="https://www.robert-liu-designer.tk/tags/Tensorflow/"/>
-    
   </entry>
   
   <entry>
@@ -141,10 +123,6 @@
     
     
     
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="JVM" scheme="https://www.robert-liu-designer.tk/tags/JVM/"/>
-    
   </entry>
   
   <entry>
@@ -166,10 +144,6 @@
     </summary>
     
     
-    
-      <category term="javacript" scheme="https://www.robert-liu-designer.tk/tags/javacript/"/>
-    
-      <category term="demo" scheme="https://www.robert-liu-designer.tk/tags/demo/"/>
     
   </entry>
   
@@ -196,10 +170,6 @@
     
     
     
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="Concurrent" scheme="https://www.robert-liu-designer.tk/tags/Concurrent/"/>
-    
   </entry>
   
   <entry>
@@ -224,10 +194,6 @@
     </summary>
     
     
-    
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="Concurrent" scheme="https://www.robert-liu-designer.tk/tags/Concurrent/"/>
     
   </entry>
   
@@ -255,10 +221,6 @@
     
     
     
-      <category term="Tools" scheme="https://www.robert-liu-designer.tk/tags/Tools/"/>
-    
-      <category term="Docker" scheme="https://www.robert-liu-designer.tk/tags/Docker/"/>
-    
   </entry>
   
   <entry>
@@ -277,12 +239,6 @@
     </summary>
     
     
-    
-      <category term="Java" scheme="https://www.robert-liu-designer.tk/tags/Java/"/>
-    
-      <category term="Plugins" scheme="https://www.robert-liu-designer.tk/tags/Plugins/"/>
-    
-      <category term="Mybatis" scheme="https://www.robert-liu-designer.tk/tags/Mybatis/"/>
     
   </entry>
   
@@ -305,10 +261,6 @@
     </summary>
     
     
-    
-      <category term="Tools" scheme="https://www.robert-liu-designer.tk/tags/Tools/"/>
-    
-      <category term="Git" scheme="https://www.robert-liu-designer.tk/tags/Git/"/>
     
   </entry>
   
@@ -348,8 +300,6 @@ Welcome to [Hexo](https://hexo.io/)! This is your very first post. Check [docume
     </summary>
     
     
-    
-      <category term="demo" scheme="https://www.robert-liu-designer.tk/tags/demo/"/>
     
   </entry>
   

@@ -4,10 +4,8 @@
   //myChart.getModel().getComponent('bmap').getBMap();
   // 2. 指定配置和数据
   var indexList = ["TotalData-3044"];
-  // var indexList = ["1-500","501-1000","1001-1500","1501-2000","2001-2500","2501-3000","3001-3044"];
-  console.log("LOAD");
   for (let indexV in indexList) {
-    console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json');
+  //console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_lines_shanghai'+indexList[indexV]+'.json')
   $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
     var hStep = 300 / (data.length - 1);
     var busLines = [].concat.apply([], data.map(function (busLine, idx) {
@@ -15,18 +13,8 @@
         var points = [];
         for (var i = 0; i < busLine.length; i += 2) {
             var pt = [busLine[i], busLine[i + 1]];
-            /*
-	     * if (i > 0) {
-                pt = [
-                    prevPt[0] + pt[0],
-                    prevPt[1] + pt[1]
-                ];
-	    } else {
-	        console.log([pt[0] / 1e4, pt[1] / 1e4]);
-	    }*/
             prevPt = pt;
-
-            points.push([pt[0] / 1e4, pt[1] / 1e4]);
+            points.push([pt[0] / 1e5, pt[1] / 1e4]);
         }
         return {
             coords: points,
@@ -37,11 +25,11 @@
             }
         };
     }));
-    console.log("length"+Object.call(busLines)+Object.keys(busLines).length);
+	//console.log(busLines[0])
     myChart.setOption(option = {
         bmap: {
             center: [121.48, 31.25],
-            zoom: 10,
+            zoom: 20,
             roam: true,
             mapStyle: {
               'styleJson': [
@@ -174,8 +162,6 @@
             data: busLines,
             silent: true,
             lineStyle: {
-                // color: '#c23531',
-                // color: 'rgb(200, 35, 45)',
                 opacity: 0.2,
                 width: 1
             },
@@ -197,9 +183,9 @@
             },
             zlevel: 1
         }]
-    });
+       });
 });
   window.addEventListener("resize", function() {
-    myChart.resize();
+      myChart.resize();
   });
 }})();

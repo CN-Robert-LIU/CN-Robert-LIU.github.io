@@ -1,0 +1,1470 @@
+
+
+
+
+
+
+<!doctype html>
+<html  lang="zh">
+<head>
+    <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+    
+    <title>DeepL翻译器</title>
+
+    <meta name="description" content="使用免费的DeepL翻译器，以DeepL世界领先的神经网络技术为动力，用卓越的机器翻译来翻译您的文本。 
+目前支持的语言有：英语、德语、法语、西班牙语、葡萄牙语、意大利语、荷兰语、波兰语、俄语、日语和中文。" />
+    <link rel="alternate" hreflang="en" href="https://www.deepl.com/en/translator" />
+    <link rel="alternate" hreflang="de" href="https://www.deepl.com/de/translator" />
+    <link rel="alternate" hreflang="fr" href="https://www.deepl.com/fr/translator" />
+    <link rel="alternate" hreflang="es" href="https://www.deepl.com/es/translator" />
+    <link rel="alternate" hreflang="ja" href="https://www.deepl.com/ja/translator" />
+    <link rel="alternate" hreflang="pt-PT" href="https://www.deepl.com/pt-PT/translator" />
+    <link rel="alternate" hreflang="pt-BR" href="https://www.deepl.com/pt-BR/translator" />
+    <link rel="alternate" hreflang="it" href="https://www.deepl.com/it/translator" />
+    <link rel="alternate" hreflang="nl" href="https://www.deepl.com/nl/translator" />
+    <link rel="alternate" hreflang="pl" href="https://www.deepl.com/pl/translator" />
+    <link rel="alternate" hreflang="ru" href="https://www.deepl.com/ru/translator" />
+    <link rel="alternate" hreflang="zh" href="https://www.deepl.com/zh/translator" />
+    <link rel="alternate" hreflang="x-default" href="https://www.deepl.com/translator" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=no"/>
+    <link rel="icon" type="image/png" href="/translator_deepL/img/favicon/favicon_16.png" sizes="16x16"/>
+    <link rel="icon" type="image/png" href="/translator_deepL/img/favicon/favicon_32.png" sizes="32x32"/>
+    <link rel="icon" type="image/png" href="/translator_deepL/img/favicon/favicon_96.png" sizes="96x96"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="/translator_deepL/img/apple-touch-icon.png"/>
+    <meta name="msapplication-TileColor" content="#042b48"/>
+    <meta name="msapplication-TileImage" content="/img/favicon/tile_144.png"/>
+    <meta name="msapplication-square70x70logo" content="/img/favicon/tile_small.png"/>
+    <meta name="msapplication-square150x150logo" content="/img/favicon/tile_medium.png"/>
+    <meta name="msapplication-square310x310logo" content="/img/favicon/tile_large.png"/>
+    <meta name="google" content="notranslate"/>
+    <meta property="og:title" content="DeepL翻译器" />
+    <meta property="og:description" content="使用免费的DeepL翻译器，以DeepL世界领先的神经网络技术为动力，用卓越的机器翻译来翻译您的文本。 目前支持的语言有：英语、德语、法语、西班牙语、葡萄牙语、意大利语、荷兰语、波兰语、俄语、日语和中文。" />
+    <meta property="og:image" content="https://www.DeepL.com/img/favicon/deepl_logo_600_300.png" />
+    <meta property="og:url" content="https://www.DeepL.com/translator" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet" />
+    <script>
+        (function(){
+            var ep;
+            try{ window.localStorage && (ep = JSON.parse(window.localStorage.getItem('dl_ep')||"false")); }catch(e){console.error(e);}
+                            var sToken = (document.cookie.match(/(?:^| )dl_session=([^;]+)/)||[])[1];
+            
+            window.dl_pageState = {
+                v: '20180814',
+                il: 'zh',
+                dataUseProhibited: !!(document.cookie||"").match(/(^| )data-use-prohibited=[^;]+/),
+				logoutTarget: '/translator',
+				relCanonical: '/translator',
+				featureFlags: ['newInterfaceLangs_JAZH_2020_03','newTranslatorLangs_JAZH_2020_03','regionalTargetLangs_PT_2020_03',]
+            };
+            if (sToken){
+                dl_pageState.loggedIn = true;
+                dl_pageState.sessionToken = sToken;
+                document.documentElement.classList.add('dl_user_logged_in');
+            } else if (ep){
+                dl_pageState.ep = ep
+                document.documentElement.classList.add('dl_ep');
+            }
+            if (ep||sToken){
+                dl_pageState.pro = true;
+                document.documentElement.classList.add('dl_pro');
+            }
+            if ((document.cookie||"-").match(/^-$|^il=[^;]*$/) && window.localStorage && !window.localStorage.length){
+                window._initialReferrer = ((document.referrer||"").match(/.*?\/\/([^:\/?]+)/) || [])[1] || "";
+                localStorage.setItem('initialReferrer', window._initialReferrer);
+            }
+
+            window.dl_documentReady || (window.dl_documentReady = function(f){ (window.dl_documentReady._callbacks || (window.dl_documentReady._callbacks=[])).push(f); });
+            window.dl_texts = {"pro-home\/subscribeNowButton":"\u7acb\u5373\u8ba2\u9605\uff08\u65e0\u514d\u8d39\u8bd5\u7528\uff09","pro-home\/freeTrialButton":"\u5f00\u59cb\u4f60\u7684\u514d\u8d39\u8bd5\u7528","messages\/fieldError.passwordTooShort":"\u5bc6\u7801\u957f\u5ea6\u81f3\u5c11\u4e3a8\u4e2a\u5b57\u7b26\u3002","messages\/fieldError.login_emailRequired":"\u7535\u5b50\u90ae\u7bb1\u662f\u5fc5\u8981\u7684","messages\/fieldError.login_passwordRequired":"\u5bc6\u7801\u662f\u5fc5\u8981\u7684\u3002","messages\/error.maintenanceWork":"\u6211\u4eec\u6b63\u5728\u52aa\u529b\u4fee\u590d\uff0c\u5e94\u8be5\u5f88\u5feb\u5c31\u80fd\u6b63\u5e38\u8fd0\u884c\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002"};
+
+            // M bootstrap
+            window.M = {}
+            M.__delayedCommands = []
+            M.define = function(){
+                var args = arguments
+                M.__delayedCommands.push(function(){window.M.define.apply(null, args) })
+            }
+            M.requireAsync = function(){
+                var args = arguments
+                M.__delayedCommands.push(function(){window.M.requireAsync.apply(null, args) })
+            }
+            M.registerAsync = function(key, value){
+                M.__delayedCommands.push(function(){window.M.registerAsync(key, value) })
+            }
+        })();
+    </script>
+
+	<link rel="stylesheet" type="text/css" href="/translator_deepL/css/deepl.css?v=2530662411" />
+	<link rel="stylesheet" type="text/css" href="/translator_deepL/css/deepl-redesign.css?v=1808219462" />
+	<link rel="stylesheet" type="text/css" href="/translator_deepL/css/lmt.css?v=4017283220" />
+	<script src='/translator_deepL/js/translator_early.min.js?v=3499711061'></script>
+    <script>
+        if (window.dl_pageState && !dl_pageState.dataUseProhibited && !dl_pageState.loggedIn){
+            (function (i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function () {
+                        (i[r].q = i[r].q || []).push(arguments)
+                    }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                    m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+            ga('create', 'UA-8191720-3', 'auto');
+            ga('set', 'anonymizeIp', true);
+            window.localStorage && localStorage.getItem('initialReferrer')!==null && ga('set', 'dimension1', localStorage.getItem('initialReferrer'));
+(window.location.pathname || '').match(/^\/Translator$/) && (function(){ga('set', {'campaignName': 'translationFooter', 'campaignSource': 'translationFooter', 'campaignMedium': 'translationFooter' });console.log('Campaign translation footer')})();            ga('send', 'pageview');
+        }
+    </script>
+</head>
+<body class="dl_body dl_body--translator dl_body--redesign ">
+
+<!-- ============================== TopNav ============================== -->
+
+<header class='dl_header' dl-test="dl-header">
+    <nav class='dl_header_menu_v2 dl_top_element--wide'>
+        <a class='dl_header_menu_v2__logo' href='/home' tabindex="10">
+            <img src='/translator_deepL/img/logo/DeepL_Logo_darkBlue_v2.svg' alt="DeepL logo">
+            <span>DeepL</span>
+        </a>
+        <span class="dl_header_menu_v2__separator"></span>
+        <div class="dl_header_menu_v2__items">
+            <div class="dl_header_menu_v2__links">
+                <a class="dl_header_menu_v2__links__item dl_header_menu_v2__links__item is-active" id="dl_menu_translator" href="/translator_deepL/translator" tabindex="10">
+                    翻译器                </a>
+                <a class="dl_header_menu_v2__links__item" id="dl_menu_linguee" href="https://www.linguee.com" tabindex="10">
+                    Linguee                </a>
+            </div>
+            <div class="dl_header_menu_v2__links--mobile dl_dropdown">
+                <div>
+                    <a class="dl_header_menu_v2__links__item dl_header_menu_v2__links__item is-active" href="/translator_deepL/translator" tabindex="10">
+                        翻译器                    </a>
+                </div>
+            </div>
+            <div class="dl_header_menu_v2__buttons">
+                                <div class="dl_header_menu_v2__login_button">
+                    <button dl-attr='onClick: dlHeaderMenu.doOpenLoginMenu' class="dl_header_menu_v2__buttons__item" tabindex="10"
+                        dl-test="menu-account-out-btn">
+                        登录                    </button>
+                </div>
+                <div class="dl_header_menu_v2__user_menu" dl-attr='onAnyclick{false}: $$.userMenuIsOpen, classIf{dl_header_menu_v2__user_menu--is_open}: $$.userMenuIsOpen'>
+                    <button class="dl_header_menu_v2__buttons__item" dl-attr="onClick{__TOGGLE}: $$.userMenuIsOpen" dl-test="menu-account-in-btn" tabindex="10">
+                        <span dl-attr="text: userMenu.userDisplayName"> </span><div><!-- opener --></div>
+                    </button>
+                    <div class="dl_header_menu_v2__user_menu__dropdown">
+                                                    <a href='/pro-account.html' tabindex="10" dl-test="menu-account-link" autofocus="autofocus">账户</a>
+                        
+                        
+                        <button onclick="M.requireAsync(['kDeepL'],function(kDeepL){kDeepL.logout();})" tabindex="10" dl-test="menu-account-logout">
+                            退出登录                        </button>
+                    </div>
+                </div>
+                <div id="notifications-container"></div>
+                <div class='dl_header_menu_v2__buttons__menu'>
+                    <button class="dl_header_menu_v2__buttons__item" dl-attr='onClick: dlHeaderMenu.doOpenNavMenu' dl-test="menu-site-btn"
+                        title="主菜单" tabindex="10"
+                    >
+                        主菜单                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+</header>
+<div dl-attr='content: dlHeaderMenu.content'></div>
+
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup'>
+    <div class="dl_menu_overlay" dl-attr="onClick: $0.doCloseMenu"></div>
+    <div id="dl_menu" class="dl_menu" dl-test="menu-site">
+        <button class="dl_menu__close_button" title="关闭" dl-attr="onClick: $0.doCloseMenu" tabindex="10"></button>
+        <div class="dl_menu__main_section" dl-attr='content: $0.mainSection'>
+            [content]
+        </div>
+        <div class="dl_menu__bottom_section" dl-attr='content: $0.footerSection'>
+            [footer]
+        </div>
+    </div>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup_NavMainSection'>
+    <nav>
+        <a class="dl_header_menu__nav_link dl_header_menu__nav_link--translator" href="/translator_deepL/translator" autofocus="autofocus" tabindex="10">翻译器</a>
+        <a class="dl_header_menu__nav_link dl_header_menu__nav_link--linguee" href="https://www.linguee.com/" tabindex="10">Linguee</a>
+        <hr>
+                    <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/pro.html">DeepL Pro</a>
+            <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/pro.html#pricing">不同计划和价格</a>
+                <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/pro-faq.html">常见问题</a>
+        <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/support">客服</a>
+        <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/blog.html">博客</a>
+        <a class="dl_header_menu__nav_link dl_header_menu__nav_link--app" dl-attr="classIf{dl_header_menu__nav_link--hidden}: $0.isDownloadAppHidden" tabindex="10" href="/translator_deepL/app">Windows/macOS版客户端</a>
+        <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/press.html">新闻报道</a>
+        <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/jobs.html">DeepL正在招募</a>
+        <a class="dl_header_menu__nav_link" tabindex="10" href="/translator_deepL/docs-api.html">API技术文件</a>
+    </nav>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup_LoginMainSection'>
+    <div class="dl_menu__login" >
+        <div class="dl_menu__login__banner">DeepL Pro <br> 登录</div>
+        <form class="dl_menu__login__form" method='POST' onsubmit="event.preventDefault(); return false;" novalidate='novalidate'>
+            <div class="dl_menu__login__form__email">
+                <input class="" name='username' type='email' dl-attr='value: $0.data_login'
+                    autocomplete="username email" placeholder="邮箱"
+                    tabindex="10" autofocus="autofocus" spellcheck="false"
+                    id='login_email' required dl-test="menu-login-username">
+            </div>
+            <div class="dl_menu__login__form__pass">
+                <input name='password' type='password' autocomplete="current-password" dl-attr='value: $0.data_password'
+                    placeholder="密码" tabindex="10"
+                    id='login_password' required dl-test="menu-login-password">
+                <button type="button" class="dl_menu__login__form__pass__forgot" dl-attr="onClick: $0.doOpenPasswordForgotten" tabindex="10" >忘记密码？</button>
+            </div>
+            <button class="dl_menu__login__form__submit dl_button--2" dl-attr="onClick: $0.doLogin" tabindex="10"
+                dl-test="menu-login-submit">登录</button>
+            <div class="dl_menu__login__form__rememberme">
+                <label for="login_rememberme">
+                    <input type="checkbox" name="login_rememberme" id="login_rememberme" dl-attr='value: $0.data_keepLogin' tabindex="10">
+                    <span class="dl_form__checkbox"></span>
+                    <span class="dl_menu__login__form__rememberme__title">
+                        记住我                    </span>
+                </label>
+            </div>
+        </form>
+        <div class='dl_menu__error' dl-attr='html: $0.loginError'></div>
+    </div>
+</template>
+
+<!-- =============================== -->
+<template dl-template='dlMainPopup_ForgotPasswordSection'>
+    <div class="dl_menu__login__back" dl-attr="onClick: $0.doOpenLoginMenu">
+        <a href="#" class="dl_menu__login__back_link">
+            返回登录页        </a>
+    </div>
+    <div class="dl_menu__login__banner">密码重置</div>
+    <form class="dl_menu__login__form dl_menu__forgot__form" method='POST' onsubmit="event.preventDefault(); return false;" novalidate='novalidate'>
+        <div class="dl_menu__login__form__email">
+            <!-- <label class="dl_menu__login__form__email" for="forgot_email">邮箱</label> -->
+            <input class="" name='username' type='email' dl-attr='value: $0.data_login'
+                autocomplete="username email" placeholder="邮箱" tabindex="0" autofocus="autofocus"
+                id='forgot_email' required dl-test="menu-login-username">
+        </div>
+        <button class="dl_menu__login__form__submit dl_button--2"
+            dl-attr="onClick: $0.doSendPasswordLink, removeIf: $0.removeInput">密码重置</button>
+    </form>
+    <div class='dl_menu__error' dl-attr='html: $0.errorMessage'></div>
+    <div class='dl_menu__message' dl-attr='html: $0.feedbackMessage'></div>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup_SignupFooterSection'>
+    <div class="dl_menu__bottom_section--signup">
+        <div class="dl_menu__login__signup_text">还没有账户吗？</div>
+        <a class="dl_menu__login__signup_link dl_link dl_link--small dl_link--more" href="/translator_deepL/pro.html">注册DeepL Pro</a>
+    </div>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup_LogoutSection'>
+            <a class='dl_header_menu__nav_link' href='/pro-account.html' tabindex="0" dl-test="menu-account-link">账户</a>
+        <button class="dl_menu__signup" dl-attr='onClick: $0.doLogout'>退出登录</button>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dlMainPopup_LoginSection'>
+    <button class="dl_menu__login_btn" dl-attr="onClick: $0.doOpenLoginMenu">登录</button>
+    <a href="/translator_deepL/pro.html" class="dl_menu__signup">注册</a>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dl_headerMenu__appButton_windows'>
+    <a tabindex='10' dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL" class='dl_headerMenu__appButton'><span>下载Windows客户端</span><span>免费！</span></a>
+</template>
+
+<template dl-template='dl_headerMenu__appButton_mac'>
+    <a tabindex='10' dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL" class='dl_headerMenu__appButton'><span>下载Mac客户端</span><span>免费！</span></a>
+</template>
+
+<!-- =============================== -->
+
+
+<script>
+var dl_dropdown = {
+    toggle: function(toggler, e) {
+        if (!e) e = window.event;
+        e.preventDefault();
+        toggler.parentNode.classList.toggle('dl--is_open');
+    }
+}
+
+</script>
+
+
+<!-- ============================== Invisible page information for search engines =================================== -->
+
+<main class='dl_hidden'>
+    <h1>DeepL翻译器</h1>
+    <p>使用免费的DeepL翻译器，以DeepL世界领先的神经网络技术为动力，用卓越的机器翻译来翻译您的文本。 
+目前支持的语言有：英语、德语、法语、西班牙语、葡萄牙语、意大利语、荷兰语、波兰语、俄语、日语和中文。</p>
+</main>
+
+<!-- ============================== Translator ============================== -->
+
+<div class='dl_translator_page_container'>
+
+    <script>
+        window.dl_texts || (window.dl_texts = new Object(null));
+    	Object.assign(window.dl_texts, {"translator\/detectLanguage":"<span class=\"translate_from\">\u6e90\u8bed\u8a00<\/span><strong><span>\u4efb\u4f55<\/span>\u8bed\u8a00<\/strong>","translator\/translateFrom":"<span class=\"translate_from\">\u6e90\u8bed\u8a00<\/span>","translator\/translationLanguageDetected":"\uff08\u81ea\u52a8\u68c0\u6d4b\uff09","translator\/alternativeTranslations":"\u5176\u4ed6\u7ffb\u8bd1\u7ed3\u679c\uff1a","translator\/notification_overload":"\u7531\u4e8eDeepL\u7ffb\u8bd1\u5668\u7684\u8bbf\u95ee\u91cf\u8fc7\u5927\uff0c\u76ee\u524d\u670d\u52a1\u53d7\u9650\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002","translator\/notification_networkProblems":"\u7f51\u7edc\u8fde\u63a5\u4f3c\u4e4e\u6709\u95ee\u9898\u3002DeepL\u7ffb\u8bd1\u5668\u7684\u529f\u80fd\u53ef\u80fd\u4f1a\u53d7\u5230\u9650\u5236\u3002","translator\/notification_onlyOneSentence":"\u7531\u4e8e\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668\u7684\u6d41\u91cf\u8f83\u5927\uff0c\u5f53\u524d\u670d\u52a1\u53d7\u9650\u3002\u6bcf\u6b21\u53ea\u80fd\u7ffb\u8bd1\u5355\u4e2a\u53e5\u5b50\uff0c\u9ad8\u7ea7\u7f16\u8f91\u529f\u80fd\u4e0d\u53ef\u7528\u3002","translator\/notification_noAdvancedEditing":"\u7531\u4e8e\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668\u7684\u6d41\u91cf\u8f83\u5927\uff0c\u5f53\u524d\u670d\u52a1\u53d7\u9650\uff0c\u9ad8\u7ea7\u7f16\u8f91\u529f\u80fd\u4e0d\u53ef\u7528\u3002","translator\/notification_user_blocked":"\n\u7531\u4e8e\u6765\u81ea\u60a8\u7684IP\u5730\u5740\u7684\u8bf7\u6c42\u592a\u591a\uff0c\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668\u7684\u8bbf\u95ee\u88ab\u6682\u65f6\u505c\u7528\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5\uff0c\u8ba2\u9605DeepL Pro\uff0c\u6216\u8054\u7cfb\u6211\u4eecblock@DeepL.com\uff0c\u5e76\u6ce8\u660e\u60a8\u7684IP\u5730\u5740\u3002","translator\/messageBox_clickHint":"\u70b9\u51fb\u4e00\u4e2a\u5355\u8bcd\u53ef\u67e5\u770b\u5176\u4ed6\u7ffb\u8bd1\u7ed3\u679c\u3002","translator\/messageBox_completionHint":"\u9009\u62e9\u4e00\u4e2a\u8bcd\uff0cDeepL\u7ffb\u8bd1\u5668\u4f1a\u5e2e\u4f60\u5b8c\u6210\u53e5\u5b50\u3002","translator\/proAccountError.accountProblem":"\u4f60\u7684\u8ba2\u9605\u4fe1\u606f\u6682\u65f6\u65e0\u6cd5\u9a8c\u8bc1\u3002\u8bf7\u68c0\u67e5\u4f60\u7684\u8ba2\u9605\u72b6\u6001\uff0c\u7a0d\u540e\u518d\u8bd5\u3002","translator\/proAccountError.quotaReached":"\u4f60\u7684\u7ffb\u8bd1\u9650\u989d\u5df2\u8fbe\u5230\u3002","translator\/proAccountError.accountPageButton":"\u67e5\u770b\u4f60\u7684\u8ba2\u9605\u72b6\u6001","translator\/proAccountError.noSubscription":"<p>\u4f60\u5df2\u7ecf\u4ee5DeepL Pro\u7528\u6237\u8eab\u4efd\u767b\u5f55\uff0c\u4f46\u6211\u4eec\u5728\u4f60\u7684\u8d26\u6237\u4e2d\u672a\u627e\u5230\u6709\u6548\u7684\u4e2a\u4eba\u8ba2\u9605\u6216\u56e2\u961f\u4f1a\u5458\u8ba2\u9605\u3002<\/p><p>\u56e0\u6b64\uff0c\u4f60\u5728\u767b\u5f55\u65f6\u4e0d\u80fd\u4f7f\u7528DeepL\u7ffb\u8bd1\u5668\u3002<\/p>","translator\/proAccountError.logoutAndUseFreeButton":"\u9000\u51fa\u767b\u5f55\u5e76\u4f7f\u7528\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668","translator\/proAccountError.refreshPageButton":"\u5237\u65b0\u9875\u9762","translator\/proAccountError.noAccess":"\u4f60\u5f53\u524d\u7684\u8ba1\u5212\u4e0d\u5305\u62ec\u901a\u4f7f\u7528\u7f51\u9875\u7248DeepL\u7ffb\u8bd1\u5668\u3002","translator\/proAccountError.noAccess_logoutButton":"\u8bf7\u9000\u51fa\u767b\u5f55\u5e76\u4f7f\u7528\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668\u3002","translator\/copyText.tooltip":"\u590d\u5236\u5230\u526a\u8d34\u677f","translator\/copyText.feedback":"\u6587\u672c\u5df2\u590d\u5236","translator\/toolbar.waitForRequestsFeedback":"\u8bf7\u8010\u5fc3\u7b49\u5f85\u6240\u6709\u8bf7\u6c42\u5b8c\u6210\u3002","translator\/saveText.successFeedback":"\u6587\u672c\u6587\u4ef6\u5df2\u521b\u5efa","translator\/saveText.tooltip":"\u53e6\u5b58\u4e3a\u6587\u672c\u6587\u4ef6","translator\/share.tooltip":"\u5206\u4eab\u7ffb\u8bd1","translator\/shareMenu.headline":"\u5206\u4eab","translator\/shareMenu.copyUrlButton":"\u590d\u5236URL","translator\/shareMenu.textShortendHint":"\u6ce8\u610f\uff1a\u4f60\u7684\u6587\u672c\u8fc7\u957f\uff0c\u4e0d\u80fd\u5168\u6587\u5206\u4eab\uff1b\u53ea\u6709\u7b2c\u4e00\u53e5\u8bdd\u4f1a\u88ab\u5206\u4eab\u3002","translator\/shareMenu.urlToShare":"\u5206\u4eabURLe","translator\/share.mailBody":"\u901a\u8fc7www.DeepL.com\/Translator\uff08\u514d\u8d39\u7248\uff09\u7ffb\u8bd1","translator\/share.mailSubject":"\u901a\u8fc7DeepL Translator\u7ffb\u8bd1","translator\/share.title":"\u901a\u8fc7www.DeepL.com\/Translator\uff08\u514d\u8d39\u7248\uff09\u7ffb\u8bd1","translator\/share.editedTranslationHint":"\u7ffb\u8bd1\u5df2\u88ab\u7f16\u8f91\u3002","translator\/share.editedTranslation_revertButton":"\u6062\u590d\u539f\u59cb\u7248\u672c","translator\/share.editedTranslation_acceptButton":"\u786e\u8ba4\u66f4\u6539","translator\/selectEnglish":"\u82f1\u8bed","translator\/selectGerman":"\u5fb7\u8bed","translator\/selectFrench":"\u6cd5\u8bed","translator\/selectSpanish":"\u897f\u73ed\u7259\u8bed","translator\/selectItalian":"\u610f\u5927\u5229\u8bed","translator\/selectDutch":"\u8377\u5170\u8bed","translator\/selectPolish":"\u6ce2\u5170\u8bed","translator\/selectRussian":"\u4fc4\u8bed","translator\/selectPortuguese":"\u8461\u8404\u7259\u8bed","translator\/selectLang.target.en":"\u82f1\u8bed","translator\/selectLang.target.de":"\u5fb7\u8bed","translator\/selectLang.target.fr":"\u6cd5\u8bed","translator\/selectLang.target.es":"\u897f\u73ed\u7259\u8bed","translator\/selectLang.target.it":"\u610f\u5927\u5229\u8bed","translator\/selectLang.target.nl":"\u8377\u5170\u8bed","translator\/selectLang.target.pl":"\u6ce2\u5170\u8bed","translator\/selectLang.target.ru":"\u4fc4\u8bed","translator\/selectLang.target.pt":"\u8461\u8404\u7259\u8bed","messages\/appWorkflow.appDelayProLink":"\u83b7\u53d6\u66f4\u5feb\u7ffb\u8bd1\u901a\u8fc7<a href=\"https:\/\/www.deepl.com\/pro.html?utm_source=win_app&utm_medium=banner&utm_campaign=perf_banner\">DeepL Pro &rarr;<\/a>","messages\/fieldError.requiredField":"\u8fd9\u662f\u5fc5\u8981\u7684\u4fe1\u606f\u3002","messages\/appWorkflow.appDelayText":"\u76ee\u524d\u514d\u8d39\u7248DeepL\u7ffb\u8bd1\u5668\u7684\u6d41\u91cf\u8fc7\u5927\u3002\u4f60\u7684\u7ffb\u8bd1\u5c06\u5728${seconds}\u79d2\u5185\u5b8c\u6210\u3002"});
+    </script>
+        <div id='dl_translator' class='lmt lmt--empty_source dl_top_element--wide lmt--web'>
+        <div class='lmt__sides_container'>
+        <div class='lmt__stickyMenubar_whiteBackground lmt__stickyMenubar_whiteBackground--hide' dl-test="lmt__stickyMenubar_whiteBackground"></div>
+            
+    <div class='lmt__textarea_separator lmt__textarea_separator--left'>
+        <div class='lmt__textarea_separator__vertical_line'></div>
+        <div class='lmt__textarea_separator__arrow'></div>
+        <div class='lmt__textarea_separator__border_inner'></div>
+        <div class='lmt__textarea_separator__border_outer'></div>
+        <div class='lmt__textarea_separator__busy'></div>
+    </div>
+
+
+            <div class='lmt__side_container lmt__side_container--source' dl-test="translator-source">
+                <div class='lmt__language_container'>
+                    <div class='lmt__language_select lmt__language_select--source' dl-test="translator-source-lang">
+                        <button class="lmt__language_select__active" dl-test="translator-source-lang-btn" tabindex="100">
+                            <span class="lmt__language_select__active__title"><span class="translate_from">源语言</span><strong><span>任何</span>语言</strong></span>
+                            <div class='lmt__language_select__opener'></div>
+                        </button>
+                        <div class='lmt__language_select__menu' dl-test="translator-source-lang-list">
+                            <button dl-lang='auto' tabindex="100">任何语言（自动检测语言）</button>
+                            <button dl-lang='ZH' tabindex="100">中文</button>
+                            <button dl-lang='EN' tabindex="100">英语</button>
+                            <button dl-lang='DE' tabindex="100">德语</button>
+                            <button dl-lang='FR' tabindex="100">法语</button>
+                            <button dl-lang='ES' tabindex="100">西班牙语</button>
+                            <button dl-lang='PT' tabindex="100">葡萄牙语</button>
+                            <button dl-lang='IT' tabindex="100">意大利语</button>
+                            <button dl-lang='NL' tabindex="100">荷兰语</button>
+                            <button dl-lang='PL' tabindex="100">波兰语</button>
+                            <button dl-lang='RU' tabindex="100">俄语</button>
+                            <button dl-lang='JA' tabindex="100">日语</button>
+                        </div>
+                    </div>
+                </div>
+                <div class='lmt__textarea_container'>
+                    <div class='lmt__inner_textarea_container'>
+                        <textarea class='lmt__textarea lmt__source_textarea lmt__textarea_base_style' data-gramm_editor="false" autofocus tabindex='110' dl-test="translator-source-input"></textarea>
+                        
+                        <span class='dl_visible_desktop_only'><span class='lmt__textarea_placeholder_text'>输入，粘贴文本， <br/>或在这里上传文档。<span class="dl_addition" dl-text="translatorLanguageAddition"><br>（英语、法语、德语、西班牙语、葡萄牙语、意大利语、荷兰语、波兰语、俄语、日语、中文）</span></span></span>
+                        <span class='dl_visible_handheld_only'><span class='lmt__textarea_placeholder_text'>在这里输入或粘贴文本。<span class="dl_addition" dl-text="translatorLanguageAddition"><br>（英语、法语、德语、西班牙语、葡萄牙语、意大利语、荷兰语、波兰语、俄语、日语、中文）</span></span></span>
+                                <!-- ==== docTrans: UploadButton === -->
+    <div class='docTrans_translator_upload_button' dl-test="doctrans-upload"
+        dl-attr='class{docTrans_translator_upload_button--open_target_lang_menu}: docTrans.withOpenedTargetLangMenu, class{docTrans_translator_upload_button--keep_active}:docTrans.keepActive, class{docTrans_translator_upload_button--quota_reached}: docTrans.X_translationAllowed, _init:docTrans.doInitButton'>
+                    <form>
+                <div class='docTrans_translator_upload_button__inner'>
+                    <button type='button' class="docTrans_translator_upload_button__inner_button" dl-attr='onClick: docTrans.doSelectFile' dl-test="doctrans-upload-btn" tabindex="120">
+                        <svg width="17" height="20" viewBox="0 0 17 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="1" y="1" width="15" height="18" rx="1" />
+                            <line x1="4.33398" y1="5.6665" x2="12.6673" y2="5.6665" />
+                            <line x1="4.33398" y1="9.1665" x2="12.6673" y2="9.1665" />
+                            <line x1="4.33398" y1="12.6665" x2="12.6673" y2="12.6665" />
+                        </svg>
+                        翻译文档                    </button>
+                    <input type="file" name='file' dl-test="doctrans-upload-input"
+                        dl-attr='_init: docTrans.doRegisterFileInput, attr{accept}: docTrans.acceptedFileTypes, value: docTrans.selectedFileList'/>
+                </div>
+            </form>
+            </div>
+
+    <div dl-attr='content: docTrans.dropTargetOverlay'></div>
+
+    <div class='docTrans__help_popup' dl-test="doctrans-upload-help">
+        <div class="docTrans__help_popup__icons">
+            <img src='/translator_deepL/img/icons/icon_docx_v2.svg' alt='Icon for docx file format' />
+            <span class="docTrans__help_popup__icons__sep">&amp;</span>
+            <img src='/translator_deepL/img/icons/icon_pptx_v2.svg' alt='Icon for pptx file format' />
+        </div>
+        <div class="docTrans__help_popup__desc">
+            <p class='dl_visible_free_only'>用DeepL翻译器翻译你的Word（.docx）and PowerPoint（.pptx）文件。</p>
+            <p class='dl_visible_pro_only'>用DeepL翻译器翻译你的Word（.docx），PowerPoint（.pptx）和.txt文件。</p>
+        </div>
+    </div>
+                    </div>
+                    <button type='button' class='lmt__clear_text_button'><span>&times;</span></button>
+
+                                    </div>
+            </div>
+            <div class='lmt__side_container lmt__side_container--target' dl-test="translator-target">
+                                    <div class='lmt__language_container'>
+                        <div class='lmt__language_select lmt__language_select--target' dl-test="translator-target-lang" >
+                            <button class="lmt__language_select__active" dl-test="translator-target-lang-btn" tabindex="100">
+                                <span class="lmt__language_select__active__title">译为<strong>德语</strong></span>
+                                <div class='lmt__language_select__opener'></div>
+                            </button>
+
+                            <div class='lmt__language_select__menu' dl-test="translator-target-lang-list">
+                                <button tabindex='100' dl-lang='ZH' dl-short-lang='中文' >中文（简体）</button>
+                            <button tabindex='100' dl-lang='EN' dl-short-lang='英语' >英语</button>
+                            <button tabindex='100' dl-lang='DE' dl-short-lang='德语' >德语</button>
+                            <button tabindex='100' dl-lang='FR' dl-short-lang='法语' >法语</button>
+                            <button tabindex='100' dl-lang='ES' dl-short-lang='西班牙语' >西班牙语</button>
+                            <button tabindex='100' dl-lang='PT' dl-short-lang='葡萄牙语' dl-variant='pt-PT'>葡萄牙语</button>
+                            <button tabindex='100' dl-lang='PT' dl-short-lang='葡萄牙语（巴西）' dl-variant='pt-BR'>葡萄牙语（巴西）</button>
+                            <button tabindex='100' dl-lang='IT' dl-short-lang='意大利语' >意大利语</button>
+                            <button tabindex='100' dl-lang='NL' dl-short-lang='荷兰语' >荷兰语</button>
+                            <button tabindex='100' dl-lang='PL' dl-short-lang='波兰语' >波兰语</button>
+                            <button tabindex='100' dl-lang='RU' dl-short-lang='俄语' >俄语</button>
+                            <button tabindex='100' dl-lang='JA' dl-short-lang='日语' >日语</button>                            </div>
+                        </div>
+
+                        
+                                            </div>
+                                <div dl-attr='content: translator.targetAreaAdditions'></div>
+
+                <div class='lmt__textarea_container'>
+                    <div class='lmt__inner_textarea_container'>
+                        <textarea class='lmt__textarea lmt__target_textarea lmt__textarea_base_style dl_disabled' data-gramm_editor="false" disabled tabindex='110' dl-test="translator-target-input"></textarea>
+                    </div>
+                    <div class='lmt__translations_as_text' dl-test='translator-target-result-as-text-container'></div>
+                                    </div>
+            </div>
+                    </div>
+        <div dl-attr='content: usingProHint'></div>
+                <div id='lmt__dict' class='lmt__dict' dl-test="translator-dict">
+            <div class="lmt__app_dict__header" style="display: none">
+                <button class="lmt__app_dict__header_btn">
+                    <span class="lmt__app_dict__header_btn_text">Dictionary</span>
+                    <span class="lmt__app_dict__header_btn_icon"></span>
+                </button>
+            </div>
+            <div class="lmt__dict__inner"></div>
+            <div class="lmt__dict__msg"></div>
+        </div>
+        <div class='lmt__dict__word_not_in_dictionary_message'>在Linguee词典中未找到匹配。</div>
+        
+        <div class='lmt__progress_popup' dl-test='translator-progress-popup'>
+            <div>
+                <div class='lmt__busy_indicator lmt__busy_indicator--active'></div>
+                <p dl-text-template="%%num%% of %%total%% 字符数被翻译">&nbsp;</p>
+                <div class='lmt__progress_popup__progress'><div></div></div>
+                <a class='lmt__progress_popup__stop_button' tabindex='0'>停止翻译余下文本</a>
+            </div>
+        </div>
+        <div class='lmt__ask_paste_popup'>
+            <div>
+                <p dl-text-template="你在尝试插入过长的文本（%%num%% 字符）。 我们建议你将文本分割成更小的部分，以提高翻译性能并避免浏览器中可能出现的内存问题。">&nbsp;</p>
+                <a class='lmt__ask_paste_popup__cancel_button' tabindex='0'>取消</a>
+                <a class='lmt__ask_paste_popup__continue_button' tabindex='0'>继续翻译</a>
+            </div>
+        </div>
+    </div>
+        <div dl-attr='content: docTrans.panelContent'></div>
+    <div class='docTrans_usage_info__outer' dl-attr='content: docTransUsage.content'></div>
+
+<!-- ================ -->
+
+<template dl-template='lmt_targetToolbar__container'>
+    <div class='lmt__target_toolbar' dl-attr='class{lmt__target_toolbar--visible}: $0.isVisible' dl-test='translator-target-toolbar'></div>
+</template>
+
+
+
+
+<template dl-template='lmt_targetToolbar__copyButton'>
+    <div class='lmt__target_toolbar__copy' dl-test='translator-target-toolbar-copy' title="复制到剪贴板">
+        <button dl-attr='onClick: $0.doCopy' tabindex="130">
+            <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M16.2949 15.7893H8.59364C7.36747 15.7893 6.37793 14.7947 6.37793 13.5623V3.22705C6.37793 1.9946 7.36747 1 8.59364 1H16.3164C17.5425 1 18.5321 1.9946 18.5321 3.22705V13.5839C18.5106 14.7947 17.521 15.7893 16.2949 15.7893Z" stroke-miterlimit="10"/>
+                <path d="M11.1966 20.9997H3.34478C2.05408 20.9997 1 19.9402 1 18.6429V7.35629C1 6.05898 2.05408 4.99951 3.34478 4.99951H11.1966C12.4873 4.99951 13.5414 6.05898 13.5414 7.35629V18.6645C13.5414 19.9402 12.4873 20.9997 11.1966 20.9997Z" fill="white" stroke-miterlimit="10"/>
+            </svg>
+        </button>
+    </div>
+</template>
+
+<template dl-template='lmt_targetToolbar__shareButton'>
+    <div class='lmt__target_toolbar__share' dl-attr='class{lmt__target_toolbar__share--open}: $0.menuIsOpen' dl-test='translator-target-toolbar-share' title="分享翻译">
+        <button dl-attr='onClick: $0.doToggleMenu'  tabindex="130">
+        <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.14738 14.7213C6.00913 14.7213 7.51839 13.2115 7.51839 11.3492C7.51839 9.48679 6.00913 7.97705 4.14738 7.97705C2.28562 7.97705 0.776367 9.48679 0.776367 11.3492C0.776367 13.2115 2.28562 14.7213 4.14738 14.7213Z" stroke-miterlimit="10"/>
+            <path d="M15.3066 7.74421C17.1683 7.74421 18.6776 6.23447 18.6776 4.3721C18.6776 2.50974 17.1683 1 15.3066 1C13.4448 1 11.9355 2.50974 11.9355 4.3721C11.9355 6.23447 13.4448 7.74421 15.3066 7.74421Z" stroke-miterlimit="10"/>
+            <path d="M15.0741 21.0001C16.9359 21.0001 18.4451 19.4903 18.4451 17.628C18.4451 15.7656 16.9359 14.2559 15.0741 14.2559C13.2124 14.2559 11.7031 15.7656 11.7031 17.628C11.7031 19.4903 13.2124 21.0001 15.0741 21.0001Z" stroke-miterlimit="10"/>
+            <path d="M7.16992 9.18611L12.1218 6.06982" stroke-miterlimit="10"/>
+            <path d="M12.1218 16.3956L7.16992 13.2793" stroke-miterlimit="10"/>
+        </svg>
+        </button>
+    </div>
+</template>
+
+<template dl-template='lmt_targetToolbar__saveButton'>
+    <div class='lmt__target_toolbar__save' dl-test='translator-target-toolbar-download' title="另存为文本文件">
+        <button dl-attr='onClick: $0.doSave'  tabindex="130">
+            <svg width="20" height="22" viewBox="0 0 11 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5.2666 0V15.472"  stroke-miterlimit="10"/>
+                <path d="M9.98861 10.8364L5.26579 15.5376L0.542969 10.8364" stroke-miterlimit="10"/>
+            </svg>
+        </button>
+    </div>
+</template>
+
+
+<template dl-template='lmt_app_delay'>
+    <div class='lmt__app_delay_no_pro_notification__outer_container'>
+        <div class='lmt__app_delay_no_pro_notification__inner_container' dl-test=''>
+            <div class="lmt__app_delay_no_pro_notification__wait_animation_container">
+                <div class="lmt__app_delay_no_pro_notification__ellipse_container"><img src="/img/apps/ellipse.png"></div>
+                <div class="lmt__app_delay_no_pro_notification__hourglass"><img src="/img/apps/hourglass.png"></div>
+            </div>
+            <div class="lmt__app_delay_no_pro_notification__progress_animation"><span></span><span></span><span></span><span></span></div>
+            <p class="lmt__app_delay_no_pro_notification__message" dl-attr="placeholderText:$0.placeholders">
+                目前免费版DeepL翻译器的流量过大。你的翻译将在${seconds}秒内完成。</p>
+            <p class="lmt__app_delay_no_pro_notification__footer">获取更快翻译通过<a href="https://www.deepl.com/pro.html?utm_source=win_app&utm_medium=banner&utm_campaign=perf_banner">DeepL Pro &rarr;</a></p>
+        </div>
+    </div>
+</template>
+
+<template dl-template='lmt_notification_blocked_ip'>
+    <div class='lmt__notification__blocked' dl-attr="classIf{lmt__notification__blocked--ip}: $0.hasAdditionalNoteForBlockedIP">
+        <div class='dl_overlay_popup' dl-attr='onClick: $0.doCtaBackToTranslator'></div>
+        <div class='lmt__notification__blocked_content'>
+            <div class='lmt__notification__blocked_title'>
+                访问 <b>暂停</b></p>
+            </div>
+            <div class='lmt__notification__blocked_desc'>
+                你的网络向我们的服务器发送的请求过多。请稍后再试，或者注册DeepL Pro，它允许你翻译更多的文本。</p>
+            </div>
+            <hr class="lmt__notification__blocked_hr">
+            <div class="lmt__notification__blocked__pro">
+                <div class="lmt__notification__blocked__pro__header">
+                    <div class="lmt__notification__blocked__pro__header_p1">
+                        注册&nbsp;
+                    </div>
+                    <div class="lmt__notification__blocked__pro__header_p2">
+                        <b>DeepL Pro</b>                    </div>
+                </div>
+                <div class='lmt__notification__blocked__pro__feats'>
+                    <div class='lmt__notification__blocked__pro__feat'>
+                        网页版翻译器无限量                    </div>
+                    <div class='lmt__notification__blocked__pro__feat'>
+                        数据保密                    </div>
+                </div>
+                <div class='lmt__notification__blocked__pro__actions'>
+                    <button class="lmt__notification__blocked__pro__cta-1" dl-attr='onClick: $0.doCtaTryPro'>
+                        免费试用30天                    </button>
+                    <div class='lmt__notification__blocked__pro__cta_sep'>
+                        或                    </div>
+                    <button class="lmt__notification__blocked__pro__cta-2" dl-attr='onClick: $0.doCtaBackToTranslator'>
+                        返回至DeepL翻译器                    </button>
+                </div>
+            </div>
+            <div class='lmt__notification__blocked_footer' dl-attr='isVisible: $0.hasAdditionalNoteForBlockedIP'>
+                如果你认为你误收了此消息，请与你的IT部门联系，请他们将你的IP地址和相关的“whois-query”结果发送至<a href="mailto:block@deepl.com">block@DeepL.com</a>。            </div>
+        </div>
+    </div>
+</template>
+
+
+
+
+<!-- ============================== Pro Advertising ============================== -->
+
+<script>
+dl_documentReady(function() {
+    M.require('WebTranslator_proAd', function(WebTranslator_proAd) {
+        WebTranslator_proAd.init();
+    });
+});
+</script>
+
+<div class='lmt__source_textarea__length_marker_pro_advertisement lmt__source_textarea__proAd' style='display:none;' dl-test='translator-character-limit-proad'>
+    <hr class="dl_hr_with_arrow">
+    <p class='lmt__source_textarea__proAd__text1'>
+        需要翻译更多？ 试用<strong>DeepL Pro！</strong>    </p>
+    <p class='lmt__source_textarea__proAd__text2'>订阅DeepL Pro以翻译超过免费版网页翻译的5000&nbsp;字符限制。</p>
+    <a class='dl_link dl_link--more' href='/pro.html' target='_blank'>了解更多</a>
+</div>
+
+<div id='lmt_pro_ad_container' class='dl_ad_pro_container' dl-attr='content: ad.content' dl-test="translator-proad">
+</div>
+
+
+
+<!-- ====================================================== -->
+
+        <!-- ============================== Ads ============================== -->
+        <script>
+
+        </script>
+        <article id='lmt_quotes_article'>
+            <div class='dl_top_element dl_top_element--wide'>
+                <!-- <div class='lmt_quotes_header'>媒体眼中的DeepL</div> -->
+                <div class='lmt_quotes'>
+                    <div class='lmt_quotes__prev_button'><svg version="1.0" class="lmt_quotes_nav_button_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="60px" viewBox="0 0 12 30" xml:space="preserve"><path d="M10 2 L2 14 L10 27"></path></svg></div>
+                    <div class='lmt_quotes__container'></div>
+                    <div class='lmt_quotes__next_button'><svg version="1.0" class="lmt_quotes_nav_button_svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="60px" viewBox="0 0 12 30" xml:space="preserve"><path d="M2 2 L10 14 L2 27"></path></svg></div>
+                </div>
+                <div class='lmt_quotes_nav'></div>
+
+            </div>
+
+
+<div id='lmt_quotes_dataContainer' class='dl_hidden'>
+<div dl-quote-img='techcrunch.png' dl-quote-img2='techcrunch.png' dl-quote-additional-duration='30000' dl-quote-prio='0'>
+	<blockquote>科技巨头谷歌（Google）、微软（Microsoft）和脸书（Facebook）都将机器学习应用到翻译领域，但一家名为DeepL的小公司却超越了他们，并且提高了该领域的标准。<br>其翻译速度可与规模庞大的竞争者相媲美，但比我们使用过的任何一个翻译工具都要准确和细致。</blockquote>
+	<cite><a href='https://techcrunch.com/2017/08/29/deepl-schools-other-online-translators-with-clever-machine-learning/'>动点科技（TechCrunch）</a><br>美国</cite>
+</div>
+<div dl-quote-img='le_monde.png' dl-quote-img2='le_monde.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>DeepL的表现也优于其他翻译器，得益于更多的地道的“法式”表达。</blockquote>
+	<cite><a href='http://www.lemonde.fr/pixels/article/2017/08/29/quel-est-le-meilleur-service-de-traduction-en-ligne_5177956_4408996.html?xtmc=deepl&xtcr=1'>世界报（Le Monde）</a><br>法国</cite>
+</div>
+<div dl-quote-img='golem.png' dl-quote-img2='golem.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>即使谷歌（Google）和微软（Microsoft）的英文翻译效果相当不错，但DeepL的翻译表现还是超过了它们。我们翻译了一份法国日报的报道，DeepL的结果堪称完美。</blockquote>
+	<cite><a href='https://www.golem.de/news/deepl-im-hands-on-neues-tool-uebersetzt-viel-besser-als-google-und-microsoft-1708-129715.html'>Golem.de</a><br>德国</cite>
+</div>
+<div dl-quote-img='la_stampa.png' dl-quote-img2='la_stampa.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>通过对英语-意大利语互译的快速测试，即使没有任何统计根据，也能确认其翻译质量确实不错，尤其是从意大利语翻译成英语的翻译质量。</blockquote>
+	<cite><a href='http://www.lastampa.it/2017/08/29/tecnologia/news/deepl-traduttore-dalla-germania-unalternativa-a-google-translate-uHXifbhlSKzsB5uN8LYknO/pagina.html'>La Stampa</a><br>意大利</cite>
+</div>
+<div dl-quote-img='abc.png' dl-quote-img2='abc.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>系统能快速、自动地识别语言，将单词转化为你想要的语言，并尝试添加特殊的语言细微差别和表达方式。</blockquote>
+	<cite><a href='http://www.abc.es/tecnologia/informatica/software/abci-cual-mejor-servicio-traduccion-online-deepl-quiere-desterrar-google-201708291325_noticia.html'>阿贝塞报（ABC）</a><br>西班牙</cite>
+</div>
+<div dl-quote-img='RTL_Z.png' dl-quote-img2='RTL_Z.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>确实，一些测试表明，DeepL翻译器比谷歌（Google）翻译提供更好的荷兰语-英语的翻译，反之亦然。</blockquote>
+	<cite><a href='https://www.rtlz.nl/tech/duits-bedrijf-belooft-betere-vertalingen-dan-google-translate'>RTL Z</a><br>荷兰</cite>
+</div>
+<div dl-quote-img='repubblica.png' dl-quote-img2='repubblica.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>在第一次测试中——英语翻译成意大利语——结果显示，它非常准确，特别善于把握句子的意思，而不是局限于字面翻译。</blockquote>
+	<cite><a href='http://www.repubblica.it/tecnologia/prodotti/2017/08/29/news/arriva_deepl_il_traduttore_automatico_che_sfida_google-174078830/'>la Repubblica</a><br>意大利</cite>
+</div>
+<div dl-quote-img='mobilegeeks.png' dl-quote-img2='mobilegeeks.png' dl-quote-additional-duration='4000' dl-quote-prio='0'>
+	<blockquote>就我个人而言，DeepL令我刮目相看，是的，我觉得这真的很棒，机器翻译发展到这个新的阶段，并不是靠脸书（Facebook）、微软（Microsoft）、苹果（Apple）或谷歌（Google）的软件实现的，而是由一家德国公司实现的。我们习惯小看自己，假装这个国家没有人能够与大玩家抗衡。然而DeepL就是一个很好的例子，它告诉我们，一切皆有可能。</blockquote>
+	<cite><a href='https://www.mobilegeeks.de/news/deepl-ein-besseres-uebersetzungs-tool-als-google-translate/'>Mobile Geeks</a><br>德国</cite>
+</div>
+<div dl-quote-img='wired.png' dl-quote-img2='wired.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>来自德国的DeepL完胜谷歌翻译。<br>
+根据WIRED的快速测试结果，DeepL的翻译表现确实丝毫不逊色于那些高阶竞争者，在很多情况下甚至超过了他们，翻译出来的文本阅读起来往往要流畅得多；在谷歌翻译出现完全没有意义的单词链的地方，DeepL至少可以猜出其中的联系。
+</blockquote>
+	<cite><a href='https://www.wired.de/collection/tech/deepl-google-translate-linguee'>WIRED.de</a><br>德国</cite>
+</div>
+<div dl-quote-img='wwwhatsnew.png' dl-quote-img2='wwwhatsnew.png' dl-quote-additional-duration='0' dl-quote-prio='0'>
+	<blockquote>DeepL，一款优于谷歌（Google）、微软（Microsoft）和脸书（Facebook）的在线翻译器</blockquote>
+	<cite><a href='https://wwwhatsnew.com/2017/08/29/deepl-un-traductor-online-que-supera-al-de-google-microsoft-y-facebook/'>wwwhat's new</a><br>拉美</cite>
+</div>
+</div>
+        </article>
+
+        <!-- ====================================================== -->
+
+</div>
+
+<!-- ============================== Footer ============================== -->
+
+    
+<footer class='dl_footer dl_top_element--wide' dl-test="dl-footer"><div dl-attr='content: footerIllustration'></div>    <div class="dl_footer__container">
+        <nav class='dl_footer__nav'>
+            <div class='dl_menu_items'>
+                <span class='dl_footer__langselect dl_menu_item'><select onchange="location.href=this.value;" title="Site language" dl-test="language-selector" tabindex="500">
+					<option value='/en/translator'>English</option>
+					<option value='/de/translator'>Deutsch</option>
+					<option value='/fr/translator'>Français</option>
+					<option value='/es/translator'>Español</option>
+					<option value='/ja/translator'>日本語 (Japanese)</option>
+					<option value='/pt-PT/translator'>Português</option>
+					<option value='/pt-BR/translator'>Português (Brasil)</option>
+					<option value='/it/translator'>Italiano</option>
+					<option value='/nl/translator'>Nederlands</option>
+					<option value='/pl/translator'>Polski</option>
+					<option value='/ru/translator'>Русский (Russian)</option>
+					<option value='/zh/translator' selected>简体中文 (simplified Chinese)</option>
+                </select></span>
+                <a class="dl_menu_item" tabindex="500" href='/press.html'>新闻</a>
+                <a class="dl_menu_item" tabindex="500" href='/privacy.html'>隐私</a>
+                <a class="dl_menu_item" tabindex="500" href='/pro-license.html'>条款 &amp; 条件</a>
+                <a class="dl_menu_item" tabindex="500" href='/publisher.html'>发行商</a>
+            </div>
+        </nav>
+        <div class='dl_footer__socials'>
+            <a class='dl_footer__social dl_footer__social--twitter' target="_blank"
+                tabindex="500" href='https://twitter.com/DeepLcom' title="Twitter" rel="noopener"></a>
+            <a class='dl_footer__social dl_footer__social--facebook' target="_blank"
+                tabindex="500" href='https://www.facebook.com/DeepLcom/' rel="noopener"></a>
+            <a class='dl_footer__social dl_footer__social--linkedin' target="_blank"
+                tabindex="500" href='https://www.linkedin.com/company/linkedin-com-company-deepl/' rel="noopener"></a>
+        </div>
+    </div>
+</footer>
+
+
+<div id='lmt__dict_message__tooManyRequests_5seconds' style='display: none;'>词典加载中...</div>
+<div id='lmt__dict_message__tooManyRequests_minute' style='display: none;'>词典将即刻再次可用。</div>
+<div id='lmt__dict_message__tooManyRequests_hour' style='display: none; color: #c66;'>词典当前不可用。</div>
+
+
+    <script>
+        window.LMT_WebTranslator_Instance = new (M.get('LMT_WebTranslator'))({
+            isPro: dl_pageState.pro,
+            backend: dl_pageState.pro ?
+                'https://api.deepl.com/jsonrpc' :
+                'https://www2.deepl.com/jsonrpc',
+        });
+        LMT_WebTranslator_Instance.initDom(document.querySelector("#dl_translator")); // early init
+    </script>
+
+    <template dl-template='lmt_usingProBanner'>
+        <div class="lmt__using_pro_notification_banner">
+            <div>
+                <h2>你正在使用<em>DeepL Pro</em>.</p>
+                <p>你的文本不会被存储。</p>
+            </div>
+        </div>
+    </template>
+
+    
+<!-- ================================= -->
+
+<div id='dl_waiting' class='dl_waiting'>
+    <img class='dl_waiting_icon' src='/translator_deepL/img/waiting.gif' alt='site busy indicator'>
+    <div class='dl_waiting_message'></div>
+</div>
+
+<!-- ================================= -->
+
+
+<!-- ================================= -->
+<div id='dl_cookie_footer' class="dl_cookie_footer" style='display:none;' dl-test="cookie-reminder">
+    <div class="dl_cookie_footer__inner">
+        <div>
+            <p>DeepL使用cookies。了解详情，请阅读我们的<a href="/translator_deepL/privacy.html">隐私政策</a>.</p>
+            <button class="dl_cookie_footer__close_btn dl_button--3" dl-test="cookie-reminder-close">
+                关闭            </button>
+        </div>
+    </div>
+    <script>
+        dl_documentReady(function(){
+            var confirmed = U.persistentValue('cookieBanner.confirmed');
+            if (!confirmed()){
+                $('body').addClass('dl_body--with_cookie_footer');
+                var $node = $('#dl_cookie_footer');
+                setTimeout(function(){ $node.addClass('dl_cookie_footer--visible'); });
+                $node.css('display','block').find('.dl_cookie_footer__close_btn').click(function(){
+                    $node.removeClass('dl_cookie_footer--visible');
+                    $('body').removeClass('dl_body--with_cookie_footer');
+                    confirmed(true);
+                });
+            }
+        });
+    </script>
+</div>
+
+<!-- ================================= -->
+
+<template dl-template='dl_outdated_site_popup'>
+    <div class='dl_outdated_site_popup'>
+        <span>此页的新版本已可用。请重新加载。</span>
+        <button class='dl_button--2' dl-attr='onClick: $0.doReload'>重新加载</button>
+    </div>
+</template>
+
+<!-- ================================= -->
+
+<template dl-template='dl_session_lost_popup'>
+    <div class='dl_session_lost_popup'>
+        <div>
+            <div dl-attr='content: $0.logoutReason'></div>
+            <button class='dl_button--2' dl-attr='onClick: $0.doReload'>继续</button>
+        </div>
+    </div>
+</template>
+
+<!-- ================================= -->
+
+<template dl-template='dl_app_user_different_from_logged_in_user'>
+    <div class='dl_session_change_to_app_user_popup' dl-attr='removeIf: $0.isRemoved'>
+        <div>
+            <div dl-attr='content: $0.popupText'></div>
+            <button class='dl_button--2' dl-attr='onClick: $0.doReload'>退出登录</button>
+            <button class='dl_button--2' dl-attr='onClick: $0.doCancel'>取消</button>
+        </div>
+    </div>
+</template>
+
+
+<!-- ================================= -->
+
+<template dl-template='dl_enterprise_info'>
+    <div class='dl_enterprise_info' dl-attr='class{dl_enterprise_info--confirmed}: $0.confirmed'>
+        <div dl-attr='class: $0.sizingClass'>
+            <div>
+                <div>
+                    <h2>DeepL Pro企业账户</h2>
+                    <p dl-attr='text: $0.name'></p>
+                </div>
+                <a dl-attr='attr{href}:$0.url' target='_blank'><img dl-attr='attr{src}: $0.logo, isVisible: $0.logo' alt="user company logo" /></a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- ================================= -->
+
+<template dl-template='dl_enterpise_login_popup'>
+    <div class='dl_enterpise_login_popup dl_popup dl_popup--small'>
+        <div class='dl_popup__background'></div>
+        <div class='dl_popup__content'><h2>登录DeepL Pro 企业账户...</h2>
+            <p dl-attr='text: $0.name'></p>
+            <img dl-attr='attr{src}:$0.logo, isVisible: $0.logo' alt="user company logo" />
+        </div>
+    </div>
+</template>
+
+<!-- ================================= -->
+
+<template dl-template='dl_enterpise_logout_popup'>
+    <div class='dl_enterpise_logout_popup dl_popup dl_popup--small'>
+        <div class='dl_popup__background'></div>
+        <div class='dl_popup__content'><h2>退出登录DeepL Pro企业账户...</h2>
+        </div>
+    </div>
+</template>
+
+<!-- =============================== -->
+
+<template dl-template='dl_iframe_popup'>
+    <div class="dl_popup" dl-attr='rootClass{dl--with_popup}: $$.isOpen, setValue{true}: $$.isOpen, removeIf: $$.isClosed'>
+        <div class="dl_popup_content">
+            <button class='dl_popup__close_button' dl-attr='onClick{false}: $$.isOpen, onClick{true}: $$.isClosed' class="dl_popup_close" tabindex='0'>&times;</button>
+            <div class="dl_popup_content__scroll_container">
+                <iframe dl-attr='attr{src}: $0.src'></iframe>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!-- =============================== -->
+	<script src='/translator_deepL/js/ext/all3.min.js?v=3505201803'></script>
+	<script src='/translator_deepL/js/translator_late.min.js?v=1518847586'></script>
+    <script>
+
+        M.define('LMT_Ready', ['LMT_WebTranslator_MainFunctionality', 'LMT_WebTranslator_Dict', '$', 'dlPageState', 'dlClientState', 'dlPrivacy', 'DeviceProps', 'queryVars', 'H2'],
+                function(LMT_WebTranslator_MainFunctionality, LMT_WebTranslator_Dict, $, dlPageState, dlClientState, dlPrivacy, DeviceProps, queryVars, H2){
+            $("html").addClass("page_loaded");
+            LMT_WebTranslator_MainFunctionality.initTranslator(LMT_WebTranslator_Instance);
+            LMT_WebTranslator_MainFunctionality.initTargetEditToolbar(LMT_WebTranslator_Instance);
+
+            LMT_WebTranslator_Dict.initTranslator(LMT_WebTranslator_Instance);
+
+            if (!dlPageState.pro)
+                M.requireAsync('WebTranslator_quotes', function(WebTranslator_quotes){  WebTranslator_quotes.init();    });
+
+            // clickOnWordHint-Test
+            !DeviceProps.isMobileLayout && dlClientState.whenAvailable(function(){
+                var testGroup = U.persistentValue('clientVars.abTest_clickOnWordHint')();
+                if (testGroup === 'classicHintBox'){
+                    LMT_WebTranslator_Instance.__abTest_clickOnWordHint_trackingEnabled = dlPrivacy.isDataUseAllowed();
+                    LMT_WebTranslator_Instance.features.require(['ClickOnWordHint_classic']);
+                }
+                else if (testGroup === 'hintBoxBelowText'){
+                    LMT_WebTranslator_Instance.__abTest_clickOnWordHint_trackingEnabled = dlPrivacy.isDataUseAllowed();
+                    LMT_WebTranslator_Instance.features.require(['ClickOnWordHint']);
+                }
+                else {
+                    LMT_WebTranslator_Instance.__abTest_clickOnWordHint_trackingEnabled = false;
+                    LMT_WebTranslator_Instance.features.require(['ClickOnWordHint_classic']);
+                }
+            });
+
+            
+
+            // observeFullTextData
+            dlPrivacy.isDataUseAllowed() && !dlPageState.pro && dlClientState.whenAvailable(function(){
+                if (U.persistentValue('clientVars.observeFullTextData')() || queryVars['observeFullTextData'])
+                    LMT_WebTranslator_Instance.features.require(['observeFullTextData'], function(observeFullTextData){ observeFullTextData.enable();});
+            });
+
+            return true;
+        });
+    </script>
+
+    <script>
+M.requireAsync(['H2', 'dlPageState'], function(H2, dlPageState) {
+if (dlPageState.pro) {
+  document.querySelector('body').appendChild(H2.createNode({tag: 'script', attributes: {src: '/js/notifications.min.js'}}));
+  document.querySelector('body').appendChild(H2.createNode({tag: 'script', attributes: {src: 'https://js.stripe.com/v3/'}}));
+}});
+
+</script>
+<script>
+M.requireAsync(['H2', 'dlPageState'], function(H2, dlPageState) {
+if (dlPageState.pro) {
+  document.querySelector('head').appendChild(H2.createNode({tag: 'link', attributes: {rel: 'stylesheet', type: 'text/css', href: '/css/notifications.css'}}));
+}});
+
+</script>
+
+    	<link rel="stylesheet" type="text/css" href="/translator_deepL/css/shariff.css?v=2104161833" />
+	<script src='/translator_deepL/js/ext/shariff.min.js?v=1808914887'></script>
+	<script src='/translator_deepL/js/ext/FileSaver.js?v=66179455'></script>
+    <script>
+        M.define('Shariff', [], function(){return Shariff});
+        M.define('FileSaver_saveAs', [], function(){return saveAs});
+    </script>
+
+<template dl-template='docTrans__generic_confirmation_popup'>
+    <div class='is3_modal_dialog is3_modal_dialog--small' dl-attr='class{is3_modal_dialog--loading}: $0.status_loading, class{is3_modal_dialog--submitting}: $0.status_submitting, rootClass{is3--modal_dialog_opened}:$0.isOpen, removeIf:$0.isRemoved'>
+        <div class='is3_modal_dialog__background' dl-attr='clickTrigger: $0.doClose'></div>
+        <div class="is3_modal_dialog__window" dl-attr='dlFieldErrors: $0.status_fieldErrors, attr{style}: $0._windowCss'>
+            <button class="is3_modal_dialog__close_button" dl-attr='hidden: $0.noClose, clickTrigger: $0.doClose' tabindex='0'>&times;</button>
+            <form onsubmit='return false;' target='_self' method='post' action=".">
+                <div class='is3_modal_dialog__header'>
+                    <h3 dl-attr='content: $0.header'>HEADER</h3>
+                </div>
+                <div dl-attr='html: $0.content' class='is3_modal_dialog__content'>
+                    <div class='is3_element'><p dl-attr='html: $0.contentText'>CONTENT</p></div>
+                </div>
+                <div class='is3_element is3_element--error' dl-attr='html: $0.status_pageError_html'></div>
+                <div class='is3_modal_dialog__buttons'>
+                    <button type='button' class='is3_modal_dialog__cancel_button' dl-attr='hidden: $0.noClose, clickTrigger: $0.doClose, html: $0.cancelText' tabindex='0'  formnovalidate='1'>取消</button>
+                    <button type='submit' class='is3_modal_dialog__submit_button' dl-attr='clickTrigger: $0.doSubmit, html: $0.submitText' tabindex='0' formnovalidate='1'>提交</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>
+
+<template dl-template='docTrans_quota_exceeded_popup'>
+<dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit' dl-attr='placeholderText: $0'>
+    <dl-bind name='header'>
+        文档翻译限制已经达到
+    </dl-bind>
+    <dl-bind name='contentText'>
+        你无法再翻译任何文档，因为你本月的文档翻译限制已经达到。（<em>${period}</em>）。
+        升级你的计划以增加你的文档翻译数量。
+    </dl-bind>
+    <dl-bind name='submitText'>
+        为你的计划选择一个升级版本
+    </dl-bind>
+</dl-node>
+</template>
+
+<template dl-template='docTrans_quota_exceeded_popup--team_member'>
+<dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit: $0.doClose' dl-attr='placeholderText: $0'>
+    <dl-bind name='header'>
+        文档翻译限制已经达到
+    </dl-bind>
+    <dl-bind name='contentText'>
+        你无法再翻译任何文档，因为你本月的文档翻译限制已经达到。（<em>${period}</em>）。
+        请联系你的团队账号管理员，以增加可用的文档翻译数量。
+        （团队：<em>${teamName}</em>）
+    </dl-bind>
+    <dl-bind name='cancelText'></dl-bind>
+    <dl-bind name='submitText'>继续</dl-bind>
+</dl-node>
+</template>
+
+<template dl-template='docTrans_quota_exceeded_popup--enterprise_user'>
+<dl-node type='docTrans__generic_confirmation_popup' bind='isOpen, isRemoved, doClose, doSubmit: $0.doClose' dl-attr='placeholderText: $0'>
+    <dl-bind name='header'>
+        文档翻译限制已经达到
+    </dl-bind>
+    <dl-bind name='contentText'>
+        你无法再翻译任何文档，因为你本月的文档翻译限制已经达到。（<em>${period}</em>）。
+    </dl-bind>
+    <dl-bind name='cancelText'></dl-bind>
+    <dl-bind name='submitText'>继续</dl-bind>
+</dl-node>
+</template>
+
+<template dl-template='docTrans_container'>
+<div class='docTrans_container dl_top_element--wide'>
+    <div>
+        <div dl-attr='content: $0.documents'></div>
+    </div>
+</div>
+</template>
+
+
+<template dl-template='docTrans_document'>
+<div class='docTrans_document' dl-attr='attr{doc-trans-file-type}: $0.fileType'>
+    <div class='docTrans_document__source_block'>
+        <div>
+            <div class='docTrans_document__file_icon'></div>
+            <div class='docTrans_document__filename_label' dl-attr='text: $0.sourceName'></div>
+        </div>
+    </div>
+    <div class='docTrans_document__target_block' dl-attr='content: $0.target'>
+    </div>
+    
+    <div class='lmt__textarea_separator lmt__textarea_separator--left'>
+        <div class='lmt__textarea_separator__vertical_line'></div>
+        <div class='lmt__textarea_separator__arrow'></div>
+        <div class='lmt__textarea_separator__border_inner'></div>
+        <div class='lmt__textarea_separator__border_outer'></div>
+        <div class='lmt__textarea_separator__busy'></div>
+    </div>
+
+</div>
+</template>
+
+<template dl-template='docTrans_document__target--uploading'>
+<div>
+    <div class='docTrans__busy_indicator docTrans__busy_indicator--active'></div>
+    <div class='docTrans_document__status_label' dl-attr='content: $0.statusText' dl-test="doctrans-upload-status-msg"></div>
+    <div class='docTrans_document__upload_progress'><div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel' dl-test="doctrans-upload-cancel">取消</button>
+</div>
+</template>
+
+
+<template dl-template='docTrans_document__target--working'>
+<div>
+    <div class='docTrans_document__status_label' dl-attr='content: $0.statusText' dl-test="doctrans-upload-status-msg"></div>
+    <div class='docTrans_document__progress_image'>
+        <img src="/translator_deepL/img/icons/icon_feat_doc_v2.svg" alt="Uploading file icon">
+    </div>
+    <div class='docTrans_document__progress'><div dl-attr='attr{style}: $0.progressStyle'></div></div>
+    <div class='docTrans_document__remaining_time_label' dl-attr='content: $0.remainingTimeText'></div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel' dl-test="doctrans-upload-cancel">取消</button>
+</div>
+</template>
+
+<template dl-template='docTrans_document__target--ready'>
+<div class="docTrans_document__target_ready">
+    <div class='docTrans_document__document_ready_label' dl-attr='content: $0.statusText' dl-test="doctrans-upload-result"></div>
+    <div class='docTrans_document__doc_notes' dl-attr='content: $0.docNotes'></div>
+    <div class='docTrans_document__file_icon'></div>
+    <div class='docTrans_document__filename_label' dl-attr='text: $0.targetName'></div>
+
+    <a class='docTrans_document__download_again_button' dl-attr='attr{href}: $0.downloadURL' dl-test="doctrans-upload-result-download">再次下载</a>
+
+    <hr class="dl_hr_with_arrow">
+
+    <div class='docTrans_document__document_ready_additional_text'><a href='/pro-checkout.html'>订阅DeepL Pro以对你的文档进行更改</a></div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doContinue' dl-test="doctrans-upload-cancel">继续</button>
+</div>
+</template>
+
+
+<template dl-template='docTrans_document__target--ready_pro'>
+<div class="docTrans_document__target_ready">
+    <div class='docTrans_document__document_ready_label' dl-attr='content: $0.statusText'></div>
+    <div class='docTrans_document__doc_notes' dl-attr='content: $0.docNotes'></div>
+    <div class='docTrans_document__file_icon'></div>
+    <div class='docTrans_document__filename_label' dl-attr='text: $0.targetName'></div>
+
+    <div class='docTrans_document__download_button dl_invisible_by_default' dl-attr='isHidden: $0.alreadyDownloaded'>
+        <a dl-attr="attr{href}:$0.downloadURL, onClick{true}: $0.alreadyDownloaded">下载</a>
+    </div>
+    <div dl-attr='content: $0.additionalHints'></div>
+
+    <div class='docTrans_document__report_error_section dl_invisible_by_default' dl-attr='class{docTrans_document__report_error_section-open}:$0.feedback_open, isVisible: $0.alreadyDownloaded'>
+        <h2 dl-attr='onClick: $0.feedback_open'>无法打开文档？</h2>
+        <div  dl-attr='isHidden: $0.feedback_feedbackSent'>
+            <form>
+                <label>请描述一下翻译该文件时遇到的问题：</label>
+                <textarea dl-attr='$0.feedback_description'></textarea>
+                <a dl-attr='onClick: $0.doSendFeedback'>发送反馈</a>
+                <p class='docTrans_document__report_error_disclaimer'>请注意，此表格仅用于报告文件翻译问题。为了获得其他问题的帮助，我们建议你咨询<a href="https://www.DeepL.com/support">DeepL客服</a>。</p>
+            </form>
+        </div>
+        <p class='dl_invisible_by_default' dl-attr='isVisible: $0.feedback_feedbackSent'>感谢你的反馈。</p>
+    </div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doContinue, isHidden: $0.alreadyDownloaded'>取消</button>
+    <button class='docTrans_document__cancel_button dl_invisible_by_default' dl-attr='onClick: $0.doContinue, isVisible:$0.alreadyDownloaded'>继续</button>
+
+</div>
+</template>
+
+<template dl-template='docTrans_document__target--error'>
+<div>
+    <div class='docTrans_document__status_label' dl-attr='content: $0.statusText' dl-test="doctrans-upload-status-msg"></div>
+    <div class='docTrans_document__error_description' dl-attr='content: $0.errorText'></div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doContinue'>继续</button>
+</div>
+</template>
+
+<template dl-template='docTrans_document__target--quota_reached_team_member'>
+<div>
+    <div class='docTrans_document__quota_error_text' dl-attr='placeholderText: $0'>
+        文档暂时无法翻译。
+        本月的文档翻译限制已经达到。（${period}）。
+    </div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>继续</button>
+</div>
+</template>
+
+<template dl-template='docTrans_document__target--quota_reached'>
+<div>
+    <div class='docTrans_document__quota_error_text' dl-attr='placeholderText: $0'>
+        文档暂时无法翻译。
+        本月的文档翻译限制已经达到。（${period}）。
+        <a href='/pro-account.html?page=category_plan'> 升级你的计划以增加你的文档翻译数量。</a>
+    </div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>继续</button>
+</div>
+</template>
+
+
+
+<template dl-template='docTrans_document__doc_warning'>
+<div class='docTrans_document__doc_warning'><span>!</span><span dl-attr='text: $0.text'></span></div>
+</template>
+
+
+<template dl-template='docTrans_drop_target_overlay'>
+<div class='docTrans_drop_target_overlay' dl-attr='_init: $0.initDropTarget, class{docTrans_drop_target_overlay--active}: $0.hoverDropArea'>
+    <div class="docTrans_drop_target__desc">
+        <div class='dl_visible_pro_only'>将.docx，.pptx，或.txt文件拖到此翻译。</div>
+        <div class='dl_visible_free_only'>将.docx或.pptx文件拖到此处翻译。</div>
+    </div>
+</div>
+</template>
+
+
+<template dl-template='docTrans_drop_target_overlay_failure'>
+<div class='docTrans_drop_target_overlay docTrans_drop_target_overlay_failure'>
+    <div class="docTrans_drop_target__desc">
+        <div class='dl_visible_pro_only'>只有单个.docx，.pptx，或.txt文件可以被翻译。</div>
+        <div class='dl_visible_free_only'>只有单个.docx或.pptx文件可以被翻译。</div>
+    </div>
+</div>
+</template>
+
+
+<template dl-template='docTrans_drop_target_overlay_not_available_beta'>
+<div class='docTrans_drop_target_overlay docTrans_drop_target_overlay_failure'>
+    <div class="docTrans_drop_target__desc">
+        beta.deepl.com上还不支持文档翻译。    </div>
+</div>
+</template>
+
+<template dl-template='docTrans_document__target_lang_select'>
+<div class='docTrans_document__target_lang_select'>
+    <div>
+        <h2 class='docTrans_document__target_lang_select__header'>选择目标语言</h2>
+        <ul>
+            <li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'EN'}: $0.targetLang">英语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'DE'}: $0.targetLang">德语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'FR'}: $0.targetLang">法语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'ES'}: $0.targetLang">西班牙语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'pt-PT'}: $0.targetLang">葡萄牙语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'pt-BR'}: $0.targetLang">葡萄牙语（巴西）</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'IT'}: $0.targetLang">意大利语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'NL'}: $0.targetLang">荷兰语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'PL'}: $0.targetLang">波兰语</button></li>
+<li><button class='docTrans_document__target_lang_select__entry' dl-test='doctrans-upload-lang-item' tabindex='0' dl-attr="onClick{'RU'}: $0.targetLang">俄语</button></li>
+        </ul>
+    </div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>取消</button>
+</div>
+</template>
+
+<template dl-template='docTrans_document__choose_different_target_lang_target'>
+<div class='docTrans_document__choose_different_target_lang_target' dl-test="doctrans-upload-lang-reselect">
+    <div>
+        <h2 class="docTrans_document__choose_different_target_lang_target__header" dl-attr='content: $0.statusText' dl-test="doctrans-upload-lang-reselect-msg"></h2>
+        <div dl-attr='content: $0.languages' class="docTrans_document__choose_different_target_lang_target_inner"></div>
+    </div>
+    <button class='docTrans_document__cancel_button' dl-attr='onClick: $0.doCancel'>取消</button>
+</div>
+</template>
+
+<template dl-template='docTrans_document__choose_different_target_lang_target__entry'>
+<button class='docTrans_document__target_lang_select__entry' tabindex='0'
+    dl-attr='content: $0.langName, onClick: $0.doExecute' dl-test="doctrans-upload-lang-reselect-list"></button>
+</template>
+
+
+
+<template dl-template='docTrans_upload_button__target_lang_menu'>
+<div class='docTrans_upload_button__target_lang_menu' dl-test="doctrans-upload-lang-list">
+    <ul dl-attr='content: $0.entries'></ul>
+</div>
+</template>
+
+<template dl-template='docTrans_upload_button__target_lang_menu_entry'>
+<li dl-test="doctrans-upload-lang-item">
+    <button type="button" dl-attr='content: $0.langName, onClick: $0.selectLangTrigger' dl-test="doctrans-upload-lang-item-btn" tabindex='0'></button>
+</li>
+</template>
+
+<template dl-template='docTrans_document_ready__limit_near_hint'>
+<p>
+    你即将达到本月的字符限制。    <a href='/pro-account.html?page=category_usage' target='_blank' onclick="window.open('/pro-account.html?page=category_usage', '_blank'); return false">监控你的用量。</a>
+</p>
+</template>
+
+
+
+<template dl-template='docTrans_usage_info'>
+<div class='dl_top_element--wide'>
+    <div dl-attr='placeholderText: $0' class='docTrans_usage_info'>
+        <div>
+            <h2>Translated documents overview</h2>
+            <p>&#x25cf;&nbsp;&nbsp;Period: <span dl-attr='content: $0.period'></span></p>
+            <p dl-attr='class{docTrans_usage_info__entry--critical}: $0.userQuotaReached'>&#x25cf;&nbsp;&nbsp;文档翻译： ${userDocuments}</p>
+            <p dl-attr='isVisible: $0.teamDocuments, class{docTrans_usage_info__entry--critical}: $0.teamQuotaReached'>&#x25cf;&nbsp;&nbsp;文档翻译（团队）：  ${teamDocuments}</p>
+        </div>
+    </div>
+</div>
+</template>
+
+
+<script>
+M.register('docTrans_texts', {
+	'docTrans/notes.oleObjects': "\u8be5\u6587\u6863\u5305\u542b\u4e86\u4e00\u4e9b\u5c1a\u672a\u7ffb\u8bd1\u7684\u5185\u5bb9\u3002\n",
+	'docTrans/notes.maxCharactersExceeded': "\u5bf9\u4e8e\u514d\u8d39\u7248Deep\u7ffb\u8bd1\u5668\u6765\u8bf4\uff0c\u6587\u6863\u8fc7\u5927\u3002\u56e0\u6b64\uff0c\u53ea\u6709\u90e8\u5206\u6587\u6863\u88ab\u7ffb\u8bd1\u3002",
+	'docTrans/notes.errorsEncountered': "\u6211\u4eec\u5728\u5904\u7406\u6587\u4ef6\u65f6\u9047\u5230\u4e86\u4e00\u4e9b\u95ee\u9898\uff0c\u8bf7\u4ed4\u7ec6\u68c0\u67e5\u3002",
+	'docTrans/notes.validationFailed': "\u6211\u4eec\u5728\u5904\u7406\u6587\u4ef6\u65f6\u9047\u5230\u4e86\u4e00\u4e9b\u95ee\u9898\uff0c\u8bf7\u4ed4\u7ec6\u68c0\u67e5\u3002",
+	'docTrans/error.languages_equal': "\u6e90\u6587\u6863\u68c0\u6d4b\u5230\u7684\u8bed\u8a00\u4e0e\u76ee\u6807\u8bed\u8a00\u76f8\u540c\u3002",
+	'docTrans/error.too_large_free': "\u4f60\u6240\u4e0a\u4f20\u7684\u6587\u4ef6\u8fc7\u5927\u3002\u8bf7\u8ba2\u9605DeepL Pro\u4ee5\u7ffb\u8bd1\u66f4\u5927\u7684\u6587\u4ef6\u3002",
+	'docTrans/error.too_large_pro': "\u4f60\u6240\u4e0a\u4f20\u7684\u6587\u4ef6\u8fc7\u5927\uff0c\u53ea\u652f\u6301${size}MB\u4ee5\u4e0b\u7684\u6587\u4ef6\u3002",
+	'docTrans/error.format_not_supported': "\u6587\u4ef6\u7c7b\u578b\u4e0d\u652f\u6301\u3002",
+	'docTrans/error.currently_unavailable': "\u76ee\u524d\u6211\u4eec\u65e0\u6cd5\u7ffb\u8bd1\u6587\u6863\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002",
+	'docTrans/error.blocked': "\u4f60\u4e0d\u80fd\u518d\u7ffb\u8bd1\u6587\u4ef6\u4e86\u3002\u8ba2\u9605DeepL Pro\u6765\u7ffb\u8bd1\u66f4\u591a\u5185\u5bb9\u3002",
+	'docTrans/error.too_large': "\u4f60\u7684\u6587\u6863\u8fc7\u5927\uff0c\u65e0\u6cd5\u7ffb\u8bd1\u3002",
+	'docTrans/error.upload_noConnection': "\u8fde\u63a5\u6211\u4eec\u7684\u670d\u52a1\u5668\u65f6\u4f3c\u4e4e\u9047\u5230\u95ee\u9898\u3002\u8bf7\u7a0d\u540e\u518d\u8bd5\u3002",
+	'docTrans/error.upload_fileNotAccepted': "\u4f60\u4e0a\u4f20\u7684\u6587\u4ef6\u4f3c\u4e4e\u5df2\u7ecf\u635f\u574f\u3002\u6211\u4eec\u65e0\u6cd5\u7ffb\u8bd1\u3002",
+	'docTrans/error.unsupported_source_language': "\u5f88\u62b1\u6b49\uff0c\u6211\u4eec\u68c0\u6d4b\u5230\u4f60\u7684\u6587\u6863\u4e2d\u5305\u542b\u6211\u4eec\u76ee\u524d\u8fd8\u4e0d\u652f\u6301\u7684\u8bed\u8a00\u3002\u6211\u4eec\u7684\u56e2\u961f\u6b63\u5728\u52aa\u529b\u4e3a\u6587\u6863\u7ffb\u8bd1\u670d\u52a1\u6dfb\u52a0\u66f4\u591a\u8bed\u8a00\u3002",
+	'docTrans/document.status_waiting': "\u7b49\u5f85\u670d\u52a1\u5668\u4e0a\u7684\u7a7a\u95f2\u4f4d\u7f6e...",
+	'docTrans/document.status_error': "\u4f60\u7684\u6587\u6863\u65e0\u6cd5\u88ab\u7ffb\u8bd1\u3002",
+	'docTrans/document.status_translating': "\u7ffb\u8bd1\u6210<em>${translateIntoLang}<\/em>...",
+	'docTrans/document.status_ready': "\u51c6\u5907\u4e0b\u8f7d",
+	'docTrans/document.status_deleted': "\u4f60\u7684\u6587\u6863\u5df2\u4ece\u6211\u4eec\u7684\u670d\u52a1\u5668\u79fb\u9664\u3002",
+	'docTrans/document.status_uploading': "\u4e0a\u4f20\u4e2d...",
+	'docTrans/documentReady.translationDownloaded': "${translation} \u5df2\u4e0b\u8f7d",
+	'docTrans/documentReady.translationReady': "${translation}\u5df2\u5b8c\u6210",
+	'docTrans/document.approxMinutesRemaining': "\u5927\u7ea6\u8fd8\u5269\u4f59${minutes} \u5206\u949f",
+	'docTrans/document.almostFinished': "\u5927\u7ea6\u8fd8\u5269\u4f59\u4e00\u5206\u949f",
+	'docTrans/document.fileSize_kb': "\uff08\u6587\u4ef6\u5927\u5c0f\uff1a$0 kB\uff09",
+	'docTrans/translator.uploadButton_2': "\u8bd1\u5165${translateIntoLang}",
+	'docTrans/translation.en': "\u82f1\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.de': "\u5fb7\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.fr': "\u6cd5\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.es': "\u897f\u73ed\u7259\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.it': "\u610f\u5927\u5229\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.nl': "\u8377\u5170\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.pl': "\u6ce2\u5170\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.ru': "\u4fc4\u8bed\u7ffb\u8bd1",
+	'docTrans/translation.pt': "\u8461\u8404\u7259\u8bed\u7ffb\u8bd1",
+	'docTrans/translateIntoLang.en': "\u82f1\u8bed",
+	'docTrans/translateIntoLang.de': "\u5fb7\u8bed",
+	'docTrans/translateIntoLang.fr': "\u6cd5\u8bed",
+	'docTrans/translateIntoLang.es': "\u897f\u73ed\u7259\u8bed",
+	'docTrans/translateIntoLang.it': "\u610f\u5927\u5229\u8bed",
+	'docTrans/translateIntoLang.nl': "\u8377\u5170\u8bed",
+	'docTrans/translateIntoLang.pl': "\u6ce2\u5170\u8bed",
+	'docTrans/translateIntoLang.ru': "\u4fc4\u8bed",
+	'docTrans/translateIntoLang.pt': "\u8461\u8404\u7259\u8bed",
+	'docTrans/translateIntoLang.pt-BR': "Portuguese",
+	'docTrans/translateIntoLang.pt-PT': "Portuguese (Brazilian)",
+	'docTrans/document.chooseDifferentLangHint': "\u4f60\u7684\u6587\u6863\u6587\u672c\u4f3c\u4e4e\u5df2\u7ecf\u662f<em>${detectedLangName}<\/em>\u3002\u8bf7\u9009\u62e9\u5176\u4ed6\u76ee\u6807\u8bed\u8a00\uff1a",
+	'docTrans/detectedLangName.en': "\u82f1\u8bed",
+	'docTrans/detectedLangName.de': "\u5fb7\u8bed",
+	'docTrans/detectedLangName.fr': "\u6cd5\u8bed",
+	'docTrans/detectedLangName.es': "\u897f\u73ed\u7259\u8bed",
+	'docTrans/detectedLangName.it': "\u610f\u5927\u5229\u8bed",
+	'docTrans/detectedLangName.nl': "\u8377\u5170\u8bed",
+	'docTrans/detectedLangName.pl': "\u6ce2\u5170\u8bed",
+	'docTrans/detectedLangName.ru': "\u4fc4\u8bed",
+	'docTrans/detectedLangName.pt': "\u8461\u8404\u7259\u8bed",
+	'translator/anyLanguage': "\u4efb\u4f55\u8bed\u8a00\uff08\u81ea\u52a8\u68c0\u6d4b\u8bed\u8a00\uff09",
+	'translator/selectEnglish': "\u82f1\u8bed",
+	'translator/selectGerman': "\u5fb7\u8bed",
+	'translator/selectFrench': "\u6cd5\u8bed",
+	'translator/selectSpanish': "\u897f\u73ed\u7259\u8bed",
+	'translator/selectItalian': "\u610f\u5927\u5229\u8bed",
+	'translator/selectDutch': "\u8377\u5170\u8bed",
+	'translator/selectPolish': "\u6ce2\u5170\u8bed",
+	'translator/selectRussian': "\u4fc4\u8bed",
+	'translator/selectPortuguese': "\u8461\u8404\u7259\u8bed",
+	'translator/selectLang.target.en': "\u82f1\u8bed",
+	'translator/selectLang.target.en.en-US': "\u82f1\u8bed\uff08\u7f8e\u5f0f\uff09",
+	'translator/selectLang.target.en.en-GB': "\u82f1\u8bed\uff08\u82f1\u5f0f\uff09",
+	'translator/selectLang.target.de': "\u5fb7\u8bed",
+	'translator/selectLang.target.fr': "\u6cd5\u8bed",
+	'translator/selectLang.target.es': "\u897f\u73ed\u7259\u8bed",
+	'translator/selectLang.target.pt': "\u8461\u8404\u7259\u8bed",
+	'translator/selectLang.target.pt.pt-PT': "\u8461\u8404\u7259\u8bed",
+	'translator/selectLang.target.pt.pt-BR': "\u8461\u8404\u7259\u8bed\uff08\u5df4\u897f\uff09",
+	'translator/selectLang.target.it': "\u610f\u5927\u5229\u8bed",
+	'translator/selectLang.target.nl': "\u8377\u5170\u8bed",
+	'translator/selectLang.target.pl': "\u6ce2\u5170\u8bed",
+	'translator/selectLang.target.ru': "\u4fc4\u8bed",
+});
+M.define('docTrans_config', ['queryVars'], function(queryVars){
+    return {
+        'fileSize_freeDOCX': 2,
+        'fileSize_freePPTX': 5,
+        'fileSize_proDOCX': 10,
+        'fileSize_proPPTX': 10,
+        'fileSize_proTXT': 1,
+                'backendUrl': queryVars['docTransBackend'] || 'https://www.deepl.com/PHP/backend/docTrans.php'
+    };
+});
+</script>
+	<link rel="stylesheet" type="text/css" href="/translator_deepL/css/is3.css?v=83506573" />
+	<script src='/translator_deepL/js/docTrans.min.js?v=939588951'></script>
+
+
+<template dl-template='pro_beta'>
+    <div class="dl_ad_pro dl_top_element--wide">
+        <div class="dl_ad_pro__bg"></div>
+        <div class="dl_ad_pro__content">
+            <h2 class="dl_ad__title">DeepL Custom Styles (beta)</h2>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action dl_button dl_button--1" href="/translator_deepL/custom-models">
+                    Go to Custom Styles                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template dl-template='pro_ad'>
+    <div class="dl_ad_pro dl_top_element--wide">
+        <div class="dl_ad_pro__bg"></div>
+        <div class="dl_ad_pro__content">
+            <h2 class="dl_ad__title">DeepL Pro &ndash; 解锁DeepL全部功能！</h2>
+            <ul class="dl_ad_pro__features_list">
+                <li class="dl_ad_pro__features_item">为你的文本保密</li>
+                <li class="dl_ad_pro__features_item">编辑翻译的文档</li>
+                <li class="dl_ad_pro__features_item">将DeepL的翻译集成到CAT工具中</li>
+                <li class="dl_ad_pro__features_item">访问我们的API</li>
+            </ul>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action dl_button dl_button--1" href="/translator_deepL/pro.html#pricing">
+                    免费试用30天                </a>
+                <span class="dl_ad__actions__separator">或</span>
+                <a class="dl_ad_pro__action dl_button dl_button--3" href="/translator_deepL/pro.html">
+                    了解更多                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template dl-template='pro_ad_ch'>
+    <div class="dl_ad_pro dl_top_element--wide">
+        <div class="dl_ad_pro__bg dl_ad_pro__bg--ch"></div>
+        <div class="dl_ad_pro__content">
+            <h2 class="dl_ad__title">DeepL Pro &ndash; 现在在瑞士上市了！</h2>
+            <ul class="dl_ad_pro__features_list">
+                <li class="dl_ad_pro__features_item">为你的文本保密</li>
+                <li class="dl_ad_pro__features_item">编辑翻译的文档</li>
+                <li class="dl_ad_pro__features_item">将DeepL的翻译集成到CAT工具中</li>
+                <li class="dl_ad_pro__features_item">访问我们的API</li>
+            </ul>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action dl_button dl_button--1" href="/translator_deepL/pro.html#pricing">
+                    免费试用30天                </a>
+                <span class="dl_ad__actions__separator">或</span>
+                <a class="dl_ad_pro__action dl_button dl_button--3" href="/translator_deepL/pro.html">
+                    了解更多                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template dl-template='pro_illustration'>
+    <div class='lmt_pro_background_illustration'><div></div>
+</template>
+
+<template dl-template='app_popup_win'>
+<div id='dl_app_banner_popup' class="dl_app_popup" dl-attr='removeIf: $0.popupIsClosed' dl-test="translator-app-popup" >
+    <div class="dl_overlay_popup" dl-attr="rootClass{dl--header_popup_open}: $0.isVisible"></div>
+    <div class='dl_app_popup__content'>
+        <div class="dl_app_popup__bg"></div>
+        <div class="dl_app_popup__vid" dl-attr='content: $0.videoElement'>
+        </div>
+        <div class="dl_app_popup__inner">
+            <h2 class="dl_app_popup__header">新增：DeepL Windows客户端</h2>
+            <p class="dl_app_popup__feat_desc">使用DeepL的最快捷和最简单的方法。</p>
+            <p class="dl_app_popup__feat_desc">在你的计算机上的任何应用程序中进行翻译。</p>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action__download dl_button dl_button--1" dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL" tabindex="0" autofocus>
+                    免费下载                </a>
+                <button class="dl_ad_pro__action__download dl_button dl_button--3" dl-attr="onClick: $0.doClose" tabindex="0">
+                    不，谢谢                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+<template dl-template='app_popup_mac'>
+<div id='dl_app_banner_popup' class="dl_app_popup" dl-attr='removeIf: $0.popupIsClosed' dl-test="translator-app-popup" >
+    <div class="dl_overlay_popup" dl-attr="rootClass{dl--header_popup_open}: $0.isVisible"></div>
+    <div class='dl_app_popup__content'>
+        <div class="dl_app_popup__bg"></div>
+        <div class="dl_app_popup__vid" dl-attr='content: $0.videoElement'>
+        </div>
+        <div class="dl_app_popup__inner">
+            <h2 class="dl_app_popup__header">新增：DeepL Mac客户端</h2>
+            <p class="dl_app_popup__feat_desc">使用DeepL的最快捷和最简单的方法。</p>
+            <p class="dl_app_popup__feat_desc">在你的计算机上的任何应用程序中进行翻译。</p>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action__download dl_button dl_button--1" dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL" tabindex="0" autofocus>
+                    免费下载                </a>
+                <button class="dl_ad_pro__action__download dl_button dl_button--3" dl-attr="onClick: $0.doClose" tabindex="0">
+                    不，谢谢                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</template>
+
+
+<template dl-template='app_banner_win'>
+    <div class='dl_ad_pro dl_pro_app_ad dl_top_element dl_top_element--wide'>
+        <div class="dl_ad_pro__bg dl_app_ad__bg"></div>
+        <div class="dl_app_ad__vid" dl-attr='content: $0.videoElement'>
+        </div>
+        <div class="dl_ad_pro__content dl_ad_pro__content--app">
+            <h2 class="dl_ad__title">新增：DeepL Windows客户端</h2>
+            <p>使用DeepL的最快捷和最简单的方法。</p>
+            <p>在你的计算机上的任何应用程序中进行翻译。</p>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action__download dl_button dl_button--1" dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL">
+                    免费下载                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template dl-template='app_banner_mac'>
+    <div class='dl_ad_pro dl_pro_app_ad dl_top_element dl_top_element--wide'>
+        <div class="dl_ad_pro__bg dl_app_ad__bg"></div>
+        <div class="dl_app_ad__vid" dl-attr='content: $0.videoElement'>
+        </div>
+        <div class="dl_ad_pro__content dl_ad_pro__content--app">
+            <h2 class="dl_ad__title">新增：DeepL Mac客户端</h2>
+            <p>使用DeepL的最快捷和最简单的方法。</p>
+            <p>在你的计算机上的任何应用程序中进行翻译。</p>
+            <div class="dl_ad__actions">
+                <a class="dl_ad_pro__action__download dl_button dl_button--1" dl-attr="onClick: $0.onDownload, attr{href}:$0.downloadURL">
+                    免费下载                </a>
+            </div>
+        </div>
+    </div>
+</template>
+
+<template dl-template='banner_video'>
+    <video class="dl_app_ad__video" autoplay loop muted poster="" id="banner_video"
+        dl-attr="attr{src}: $0.videoSrc, attr{poster}: $0.posterSrc, _init: $0.doRegisterVideoElement, attr{onload}: $0.doInitVideoElement"></video>
+    <img src="" class="dl_app_ad__poster" dl-attr="attr{src}: $0.posterSrc, isVisible: $0.isPosterVisible">
+</template>
+
+
+<!-- ===================================================== -->
+</body>
+</html>
