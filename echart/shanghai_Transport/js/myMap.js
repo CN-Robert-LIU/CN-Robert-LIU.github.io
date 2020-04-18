@@ -5,11 +5,27 @@
   // 2. 指定配置和数据
   var indexList = ["TotalData-3044"];
   for (let indexV in indexList) {
-  //console.log('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_lines_shanghai'+indexList[indexV]+'.json')
-
-    var busLines = []
-	//console.log(busLines[0])
-    var option = {
+  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
+    var hStep = 300 / (data.length - 1);
+    var busLines = [].concat.apply([], data.map(function (busLine, idx) {
+        var prevPt;
+        var points = [];
+        for (var i = 0; i < busLine.length; i += 2) {
+            var pt = [busLine[i], busLine[i + 1]];
+            prevPt = pt;
+            points.push([pt[0] / 1e5, pt[1] / 1e4]);
+        }
+        return {
+            coords: points,
+            lineStyle: {
+                normal: {
+                    color: echarts.color.modifyHSL('#5A94DF', Math.round(hStep * idx))
+                }
+            }
+        };
+    }));
+    console.log("Finish load data!")
+    myChart.setOption(option = {
         bmap: {
             center: [121.48, 31.25],
             zoom: 12,
@@ -166,62 +182,8 @@
             },
             zlevel: 1
         }]
-       };
-  myChart.setOption(option);
-  $.ajax({
-	 url:'https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json',
-	 type:'get'
-	 datatype:'json',
-	 success:function(data){
-        var hStep = 300 / (data.length - 1);
-        var busLines = [].concat.apply([], data.map(function (busLine, idx) {
-        var prevPt;
-        var points = [];
-        for (var i = 0; i < busLine.length; i += 2) {
-            var pt = [busLine[i], busLine[i + 1]];
-            prevPt = pt;
-            points.push([pt[0] / 1e5, pt[1] / 1e4]);
-        }
-        return {
-            coords: points,
-            lineStyle: {
-                normal: {
-                    color: echarts.color.modifyHSL('#5A94DF', Math.round(hStep * idx))
-                }
-            }
-        };
-       }));
-       myChart.setOption(series: [{
-            type: 'lines',
-            coordinateSystem: 'bmap',
-            polyline: true,
-            data: busLines,
-            silent: true,
-            lineStyle: {
-                opacity: 0.2,
-                width: 1
-            },
-            progressiveThreshold: 500,
-            progressive: 200
-        }, {
-            type: 'lines',
-            coordinateSystem: 'bmap',
-            polyline: true,
-            data: busLines,
-            lineStyle: {
-                width: 0
-            },
-            effect: {
-                constantSpeed: 10,
-                show: true,
-                trailLength: 0.1,
-                symbolSize: 1.5
-            },
-            zlevel: 1
-        }])
-	 }
+       });
 });
-  
   window.addEventListener("resize", function() {
       myChart.resize();
   });
