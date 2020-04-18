@@ -136,7 +136,7 @@
 	}})
   var indexList = ["TotalData-3044"];
   for (let indexV in indexList) {
-  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_lines_shanghai'+indexList[indexV]+'.json', function(data) {
+  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/shanghai-bus-lines-'+indexList[indexV]+'.json', function(data) {
     var hStep = 300 / (data.length - 1);
     var busLines = [].concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
