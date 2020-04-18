@@ -72,7 +72,7 @@
                   'featureType': 'subway',
                   'elementType': 'geometry',
                   'stylers': {
-                    'lightness': -70
+					'visibility': 'off'
                   }
                 },
                 {
@@ -185,6 +185,7 @@
             zlevel: 1
         }]
        });
+	   myChart.resize();
 })};
   window.addEventListener("resize", function() {
       myChart.resize();
