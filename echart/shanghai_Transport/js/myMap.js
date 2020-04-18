@@ -134,6 +134,9 @@
               ]
             }
 	}})
+  window.addEventListener("resize", function() {
+      myChart.resize();
+  });
   var indexList = ["TotalData-3044"];
   for (let indexV in indexList) {
   $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/shanghai-bus-lines-'+indexList[indexV]+'.json', function(data) {
@@ -188,7 +191,4 @@
        });
 	   myChart.resize();
 })};
-  window.addEventListener("resize", function() {
-      myChart.resize();
-  });
 })();
