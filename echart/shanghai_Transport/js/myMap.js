@@ -2,29 +2,9 @@
   // 1. 实例化对象
   var myChart = echarts.init(document.querySelector(".map .chart"));
   //myChart.getModel().getComponent('bmap').getBMap();
-  // 2. 指定配置和数据
-  var indexList = ["TotalData-3044"];
-  for (let indexV in indexList) {
-  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
-    var hStep = 300 / (data.length - 1);
-    var busLines = [].concat.apply([], data.map(function (busLine, idx) {
-        var prevPt;
-        var points = [];
-        for (var i = 0; i < busLine.length; i += 2) {
-            var pt = [busLine[i], busLine[i + 1]];
-            prevPt = pt;
-            points.push([pt[0] / 1e5, pt[1] / 1e4]);
-        }
-        return {
-            coords: points,
-            lineStyle: {
-                normal: {
-                    color: echarts.color.modifyHSL('#5A94DF', Math.round(hStep * idx))
-                }
-            }
-        };
-    }));
-    console.log("Finish load data!")
+  // 2. 指定配置和数据0
+  //initial map data
+    
     myChart.setOption(option = {
         bmap: {
             center: [121.48, 31.25],
@@ -153,8 +133,30 @@
                 }
               ]
             }
-        },
-        series: [{
+	}})
+  var indexList = ["TotalData-3044"];
+  for (let indexV in indexList) {
+  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
+    var hStep = 300 / (data.length - 1);
+    var busLines = [].concat.apply([], data.map(function (busLine, idx) {
+        var prevPt;
+        var points = [];
+        for (var i = 0; i < busLine.length; i += 2) {
+            var pt = [busLine[i], busLine[i + 1]];
+            prevPt = pt;
+            points.push([pt[0] / 1e5, pt[1] / 1e4]);
+        }
+        return {
+            coords: points,
+            lineStyle: {
+                normal: {
+                    color: echarts.color.modifyHSL('#5A94DF', Math.round(hStep * idx))
+                }
+            }
+        };
+    }));
+    console.log("Finish load data!"),
+	myChart.setOption({series: [{
             type: 'lines',
             coordinateSystem: 'bmap',
             polyline: true,
@@ -183,8 +185,8 @@
             zlevel: 1
         }]
        });
-});
+})};
   window.addEventListener("resize", function() {
       myChart.resize();
   });
-}})();
+})();
