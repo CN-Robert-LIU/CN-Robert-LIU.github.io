@@ -156,7 +156,7 @@
         };
     }));
     console.log("Finish load data!");
-	myChart.setOption({series: [{
+	myChart.setOption(option = {series: [{
             type: 'lines',
             coordinateSystem: 'bmap',
             polyline: true,
