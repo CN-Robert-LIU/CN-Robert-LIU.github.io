@@ -155,7 +155,7 @@
             }
         };
     }));
-    console.log("Finish load data!"),
+    console.log("Finish load data!");
 	myChart.setOption({series: [{
             type: 'lines',
             coordinateSystem: 'bmap',
