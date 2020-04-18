@@ -28,7 +28,7 @@
     myChart.setOption(option = {
         bmap: {
             center: [121.48, 31.25],
-            zoom: 12,
+            zoom: 13,
             roam: true,
             mapStyle: {
               'styleJson': [
@@ -175,7 +175,7 @@
                 width: 0
             },
             effect: {
-                constantSpeed: 10,
+                constantSpeed: 8,
                 show: true,
                 trailLength: 0.1,
                 symbolSize: 1.5
