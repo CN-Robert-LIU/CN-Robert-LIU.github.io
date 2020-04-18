@@ -136,7 +136,7 @@
 	}})
   var indexList = ["TotalData-3044"];
   for (let indexV in indexList) {
-  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_line_shanghai'+indexList[indexV]+'.json', function(data) {
+  $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/bus_lines_shanghai'+indexList[indexV]+'.json', function(data) {
     var hStep = 300 / (data.length - 1);
     var busLines = [].concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
@@ -144,7 +144,7 @@
         for (var i = 0; i < busLine.length; i += 2) {
             var pt = [busLine[i], busLine[i + 1]];
             prevPt = pt;
-            points.push([pt[0] / 1e5, pt[1] / 1e4]);
+            points.push([pt[0] / 1e4, pt[1] / 1e4]);
         }
         return {
             coords: points,
@@ -155,6 +155,7 @@
             }
         };
     }));
+	console.log(busLines[0]);
     console.log("Finish load data!");
 	myChart.setOption(option = {series: [{
             type: 'lines',
