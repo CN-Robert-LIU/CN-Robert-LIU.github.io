@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.robert-liu-designer.tk/2020/03/06/hello-world/</loc>
+    
+    <lastmod>2020-04-22T12:36:04.478Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.robert-liu-designer.tk/2020/04/20/selenium-python/</loc>
+    
+    <lastmod>2020-04-22T12:35:41.931Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.robert-liu-designer.tk/about/index.html</loc>
     
     <lastmod>2020-04-22T06:20:52.681Z</lastmod>
@@ -12,13 +26,6 @@
     <loc>https://www.robert-liu-designer.tk/2020/04/16/Idempotence%20Of%20Interface/</loc>
     
     <lastmod>2020-04-16T08:34:18.145Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.robert-liu-designer.tk/2020/04/06/hello-world/</loc>
-    
-    <lastmod>2020-04-16T02:08:27.296Z</lastmod>
     
   </url>
   
