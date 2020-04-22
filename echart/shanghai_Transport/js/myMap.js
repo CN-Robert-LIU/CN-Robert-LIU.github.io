@@ -140,7 +140,8 @@
   var indexList = ["TotalData-3044"];
   for (let indexV in indexList) {
   $.get('https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/echart/shanghai-jiaotong' + '/json/shanghai-bus-lines-'+indexList[indexV]+'.json', function(data) {
-    var hStep = 300 / (data.length - 1);
+    var myChart = echarts.init(document.querySelector(".map .chart"));
+	var hStep = 300 / (data.length - 1);
     var busLines = [].concat.apply([], data.map(function (busLine, idx) {
         var prevPt;
         var points = [];
@@ -160,35 +161,135 @@
     }));
 	console.log(busLines[0]);
     console.log("Finish load data!");
-	myChart.setOption(option = {series: [{
-            type: 'lines',
-            coordinateSystem: 'bmap',
-            polyline: true,
-            data: busLines,
-            silent: true,
-            lineStyle: {
-                opacity: 0.2,
-                width: 1
-            },
-            progressiveThreshold: 500,
-            progressive: 200
-        }, {
-            type: 'lines',
-            coordinateSystem: 'bmap',
-            polyline: true,
-            data: busLines,
-            lineStyle: {
-                width: 0
-            },
-            effect: {
-                constantSpeed: 8,
-                show: true,
-                trailLength: 0.1,
-                symbolSize: 1.5
-            },
-            zlevel: 1
-        }]
-       });
+	myChart.setOption(option = {
+        bmap: {
+            center: [121.48, 31.25],
+            zoom: 13,
+            roam: true,
+            mapStyle: {
+              'styleJson': [
+                {
+                  'featureType': 'water',
+                  'elementType': 'all',
+                  'stylers': {
+                    'color': '#031628'
+                  }
+                },
+                {
+                  'featureType': 'land',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#000102'
+                  }
+                },
+                {
+                  'featureType': 'highway',
+                  'elementType': 'all',
+                  'stylers': {
+                    'visibility': 'off'
+                  }
+                },
+                {
+                  'featureType': 'arterial',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    'color': '#000000'
+                  }
+                },
+                {
+                  'featureType': 'arterial',
+                  'elementType': 'geometry.stroke',
+                  'stylers': {
+                    'color': '#0b3d51'
+                  }
+                },
+                {
+                  'featureType': 'local',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#000000'
+                  }
+                },
+                {
+                  'featureType': 'railway',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    'color': '#000000'
+                  }
+                },
+                {
+                  'featureType': 'railway',
+                  'elementType': 'geometry.stroke',
+                  'stylers': {
+                    'color': '#08304b'
+                  }
+                },
+                {
+                  'featureType': 'subway',
+                  'elementType': 'all',
+                  'stylers': {
+					'visibility': 'off'
+                  }
+                },
+                {
+                  'featureType': 'building',
+                  'elementType': 'geometry.fill',
+                  'stylers': {
+                    'color': '#000000'
+                  }
+                },
+                {
+                  'featureType': 'all',
+                  'elementType': 'labels.text.fill',
+                  'stylers': {
+                    'color': '#857f7f'
+                  }
+                },
+                {
+                  'featureType': 'all',
+                  'elementType': 'labels.text.stroke',
+                  'stylers': {
+                    'color': '#000000'
+                  }
+                },
+                {
+                  'featureType': 'building',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#022338'
+                  }
+                },
+                {
+                  'featureType': 'green',
+                  'elementType': 'geometry',
+                  'stylers': {
+                    'color': '#062032'
+                  }
+                },
+                {
+                  'featureType': 'boundary',
+                  'elementType': 'all',
+                  'stylers': {
+                    'color': '#465b6c'
+                  }
+                },
+                {
+                  'featureType': 'manmade',
+                  'elementType': 'all',
+                  'stylers': {
+                    'color': '#022338'
+                  }
+                },
+                {
+                  'featureType': 'label',
+                  'elementType': 'all',
+                  'stylers': {
+                    'visibility': 'off'
+                  }
+                }
+              ]
+            }
+	}});
 	   myChart.resize();
 })};
 })();

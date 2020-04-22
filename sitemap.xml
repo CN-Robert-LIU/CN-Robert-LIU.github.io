@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.robert-liu-designer.tk/about/index.html</loc>
+    
+    <lastmod>2020-04-22T06:20:52.681Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.robert-liu-designer.tk/2020/04/16/Idempotence%20Of%20Interface/</loc>
     
     <lastmod>2020-04-16T08:34:18.145Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>https://www.robert-liu-designer.tk/2020/04/11/visual-Echarts/</loc>
     
     <lastmod>2020-04-11T09:46:14.353Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://www.robert-liu-designer.tk/about/index.html</loc>
-    
-    <lastmod>2020-04-11T09:42:07.543Z</lastmod>
     
   </url>
   
