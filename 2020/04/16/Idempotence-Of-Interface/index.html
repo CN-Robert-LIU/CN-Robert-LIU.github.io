@@ -172,12 +172,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img class="half-header-box mdui-img-fluid" draggable="false">
+        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/DataConsistency.jpg" class="header-box blur mdui-img-fluid" onerror="{this.src='https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg'}" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">Plugins</span><br>
-                <!--TODO-->
+                <span class="header_title">Idempotence Of Interface</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -185,111 +184,57 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    <!-- 归档列表 -->
+      <!--博文详细内容-->
+  
+<link rel="stylesheet" href="/css/post.css">
 
- <!--归档列表 -->
-<div class="mdui-center post-content">
-  <h1>Archives</h1>
-  <div class="mdui-panel" mdui-panel="{accordion : true}">
-    
-          <div class="mdui-panel-item">
-            <div class="mdui-panel-item-header">
-              <div class="mdui-panel-item-title" id="2020">2020</div>
-              <div class="mdui-panel-item-summary">共14篇</div>
-              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-            </div>
-            <div class="mdui-panel-item-body mdui-typo">
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-23
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/23/Java-Swing/">Java-Swing</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-20
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/20/selenium-python/">selinum-python</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-16
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/16/Idempotence-Of-Interface/">Idempotence Of Interface</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/ML-Algorisum/">ML-Algorisum</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/Java-Redis/">Java-Redis</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-13
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/13/Tensorflow-SaveAndLoadModel/">Tensorflow-SaveAndLoadModel</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/Java-JVM/">Java-JVM</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/visual-Echarts/">visual-Echarts</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-10
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/10/Java-Concurrent-Lock/">Java-Concurrent-Lock</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/Java-Concurrent-AsyncToSync/">Java-Concurrent-AsyncToSyncActivity</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/docker-build-deploy/">docker-build-deploy</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-08
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/08/mybatis/">mybatis-Introdution</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-07
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/07/git-operation/">git_operation</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    03-06
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/03/06/hello-world/">Hello World</a>
-                <hr>
-                
-            </div>
-          </div>
-    
+<div>
+  <div class="">
+    <article class="article-content mdui-container mdui-center mdui-shadow-12">
+      <h2><span id="gloable-id">Gloable ID</span></h2><p>If existed, which has been executed. Otherwise, storage ID into database and execut task.</p>
+<h3><span id="deduplicate-table">Deduplicate Table</span></h3><p>Put task and write into dumplicate table task into one transaction.</p>
+<h3><span id="insert-or-update">Insert Or Update</span></h3><p>double keys build one index and operate them:</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">insert</span> <span class="keyword">into</span> goods_category (goods_id,category_id,create_time,update_time)</span><br><span class="line"><span class="keyword">values</span>(<span class="comment">#&#123;goodsId&#125;,#&#123;categoryId&#125;,now(),now())</span></span><br><span class="line"><span class="keyword">on</span> <span class="keyword">DUPLICATE</span> <span class="keyword">KEY</span> <span class="keyword">UPDATE</span></span><br><span class="line">update_time=<span class="keyword">now</span>()</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">insertOrUpdate</span><span class="params">(<span class="keyword">int</span> goodsid,<span class="keyword">int</span> categoryId)</span></span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="multi-version-control">Multi Version Control</span></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> goods <span class="keyword">set</span> <span class="keyword">name</span>=<span class="comment">#&#123;newName&#125;,version=#&#123;version&#125; where id=#&#123;id&#125; and version&lt;#&#123;version&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">updateGoodsName</span><span class="params">(<span class="keyword">int</span> id,String newName,<span class="keyword">int</span> version)</span></span></span><br></pre></td></tr></table></figure>
+
+<h3><span id="status-machine">Status Machine</span></h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">update</span> <span class="keyword">order</span> <span class="keyword">set</span> <span class="keyword">status</span>=<span class="comment">#&#123;status&#125; where id=#&#123;id&#125; and status&lt;#&#123;status&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="comment">//such as: status=0,generate;status=1,create error;status=2,complete;</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">updateOrder</span><span class="params">(<span class="keyword">int</span> id,<span class="keyword">int</span> status)</span></span></span><br></pre></td></tr></table></figure>
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
+    </article>
+    <div class="article-content mdui-container mdui-center mdui-shadow-12">
+      
+    <div class="mdui-center">
+        <div class="mdui-center">
+            <article class="mdui-typo">
+                <h2>评论</h2>
+                <div class="comment"></div>
+            </article>
+        </div>
+    </div>
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+	new Valine({
+		av: AV,
+		el: '.comment',
+		app_id: 'AKX2PaxQ42S8E1ajsYWIX9S6-gzGzoHsz',
+		app_key: 'eRIvGfNJ5jQIRb48RbOQedRH',
+		notify: true, //评论提醒
+		verify: true, //验证码
+		avatar: 'retro',
+		placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+	});
+</script>
+
+    </div>
   </div>
 </div>
-</br></br></br>
+
   </div>
   <!--footer-->
   <footer class="mdui-color-indigo">

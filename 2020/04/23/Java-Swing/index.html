@@ -172,12 +172,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img class="half-header-box mdui-img-fluid" draggable="false">
+        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/java-swing.jpg" class="header-box blur mdui-img-fluid" onerror="{this.src='https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg'}" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">Plugins</span><br>
-                <!--TODO-->
+                <span class="header_title">Java-Swing</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -185,111 +184,165 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    <!-- 归档列表 -->
+      <!--博文详细内容-->
+  
+<link rel="stylesheet" href="/css/post.css">
 
- <!--归档列表 -->
-<div class="mdui-center post-content">
-  <h1>Archives</h1>
-  <div class="mdui-panel" mdui-panel="{accordion : true}">
-    
-          <div class="mdui-panel-item">
-            <div class="mdui-panel-item-header">
-              <div class="mdui-panel-item-title" id="2020">2020</div>
-              <div class="mdui-panel-item-summary">共14篇</div>
-              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-            </div>
-            <div class="mdui-panel-item-body mdui-typo">
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-23
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/23/Java-Swing/">Java-Swing</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-20
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/20/selenium-python/">selinum-python</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-16
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/16/Idempotence-Of-Interface/">Idempotence Of Interface</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/ML-Algorisum/">ML-Algorisum</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/Java-Redis/">Java-Redis</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-13
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/13/Tensorflow-SaveAndLoadModel/">Tensorflow-SaveAndLoadModel</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/Java-JVM/">Java-JVM</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/visual-Echarts/">visual-Echarts</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-10
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/10/Java-Concurrent-Lock/">Java-Concurrent-Lock</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/Java-Concurrent-AsyncToSync/">Java-Concurrent-AsyncToSyncActivity</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/docker-build-deploy/">docker-build-deploy</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-08
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/08/mybatis/">mybatis-Introdution</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-07
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/07/git-operation/">git_operation</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    03-06
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/03/06/hello-world/">Hello World</a>
-                <hr>
-                
-            </div>
-          </div>
-    
+<div>
+  <div class="">
+    <article class="article-content mdui-container mdui-center mdui-shadow-12">
+      <h3><span id="swing-class-tree">Swing Class Tree</span></h3><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Object</span><br><span class="line">    *Component</span><br><span class="line">        Container</span><br><span class="line">            *JComponent</span><br><span class="line">                *AbstractButton</span><br><span class="line">                    JButton</span><br><span class="line">                    JMenuItem</span><br><span class="line">                        JCheckBonMenuItem</span><br><span class="line">                        JMenu</span><br><span class="line">                        JRadioButonMenuItem</span><br><span class="line">                    *JToggleButton</span><br><span class="line">                        JCheckBox</span><br><span class="line">                        JRadioButton</span><br><span class="line">                Box </span><br><span class="line">                Filler</span><br><span class="line">                JColorChooser</span><br><span class="line">                JComboBox</span><br><span class="line">                JDesktopIcon</span><br><span class="line">                JFileChooser</span><br><span class="line">                JInternalFrame</span><br><span class="line">                JLabel</span><br><span class="line">                JLayeredPane</span><br><span class="line">                    JDesktopPane</span><br><span class="line">                JList</span><br><span class="line">                JMenuBar</span><br><span class="line">                JOptionPane</span><br><span class="line">                JPanel</span><br><span class="line">                JPopupMenu</span><br><span class="line">                JProgressBar</span><br><span class="line">                JRootPane</span><br><span class="line">                JScrollBar</span><br><span class="line">                JScrollPane</span><br><span class="line">                JSeparator</span><br><span class="line">                JSlider</span><br><span class="line">                JSplitPane</span><br><span class="line">                JTabbedPane</span><br><span class="line">                JTable</span><br><span class="line">                JTableHeader</span><br><span class="line">                *JTextComponent</span><br><span class="line">                    JEditorPane</span><br><span class="line">                        FrameEditorPane</span><br><span class="line">                        JTextPane</span><br><span class="line">                    JTextArea</span><br><span class="line">                    JtextField</span><br><span class="line">                        JPasswordField</span><br><span class="line">                JToolBar</span><br><span class="line">                JToolTip</span><br><span class="line">                JTree</span><br><span class="line">                JViewport</span><br><span class="line">                    ScrollableTabViewport</span><br><span class="line">            Panel</span><br><span class="line">                Applet</span><br><span class="line">                    JApplet</span><br><span class="line">            Window</span><br><span class="line">                Dialog</span><br><span class="line">                    JDialog</span><br><span class="line">                Frame</span><br><span class="line">                    JFrame</span><br><span class="line">                JWindow</span><br></pre></td></tr></table></figure>
+
+
+<h3><span id="event-listener">Event Listener</span></h3><table style="height: 1072px; width: 1000px;" border="0">
+<tbody>
+<tr>
+<td>Event：事件</td>
+<td>Condition：触发条件</td>
+<td>Listener：监听器　</td>
+<td>Adapter：适配器</td>
+<td>Method:方法</td>
+</tr>
+<tr>
+<td>KeyEvent&nbsp; &nbsp;键盘事件</td>
+<td><p>Kick or release one specific keyboard：</p><p>按下、松开、单击键盘上的某个键时触发</p></td>
+<td>&nbsp;KeyListener　　　　</td>
+<td>&nbsp;KeyAdapter</td>
+<td>
+<p>keyPressed：按下某个键时触发</p>
+<p>keyReleased：松开某个键时触发</p>
+<p>keyTyped：单击某个键时触发</p>
+</td>
+</tr>
+<tr>
+<td>MouseEvent&nbsp; &nbsp;鼠标事件</td>
+<td>&nbsp;</td>
+<td>
+<p>&nbsp;MouseListener</p>
+<p>&nbsp;</p>
+<p>MouseMotionListener</p>
+</td>
+<td>
+<p>&nbsp;MouseAdapter</p>
+<p>&nbsp;</p>
+<p>MouseMotionAdapter</p>
+</td>
+<td>
+<p>MouseListener的5个方法：</p>
+<p>mousePressed：按下某个鼠标键时触发</p>
+<p>mouseReleased：松开某个鼠标键时触发</p>
+<p>mouseClicked：单击某个鼠标键时触发</p>
+<p>mouseEntered：鼠标移入该组件时触发</p>
+<p>mouseExited：鼠标移出该组件时触发</p>
+<p>&nbsp;</p>
+<p>MouseMotionListener的2个方法：</p>
+<p>mouseMoved：在该组件上移动鼠标时触发</p>
+<p>mouseDragged：在该组件上按下某个鼠标键并移动鼠标时触发，如在画布上画图</p>
+</td>
+</tr>
+<tr>
+<td>FocusEvent&nbsp; &nbsp;焦点事件</td>
+<td>Obtain or loss focus：获得焦点、失去焦点时触发</td>
+<td>&nbsp;FocusListener</td>
+<td>&nbsp;FocusAdapter</td>
+<td>
+<p>focusGained：获取焦点时触发</p>
+<p>focusLost：失去焦点时触发</p>
+</td>
+</tr>
+<tr>
+<td>WindowEvent&nbsp; 窗体事件</td>
+<td>
+<p>Open or close window：</p>
+<p>打开窗口、关闭窗口，</p>
+<p>Mimiax window：</p>
+<p>窗口最大化、最小化时触发</p>
+</td>
+<td>&nbsp;WindowListener</td>
+<td>&nbsp;WindowAdapter</td>
+<td>
+<p>windowOpened：打开窗口时触发</p>
+<p>windowClosing：单击右上角的“X”时触发</p>
+<p>windowClosed：调用dispose()释放窗体资源时触发</p>
+<p>&nbsp;</p>
+<p>windowDeactivated：窗口失活（失去焦点）时触发</p>
+<p>windowDeiconified：窗口重新获得焦点时触发（恢复）</p>
+<p>windowActivated：窗口被激活（获得焦点）时触发，首次+恢复</p>
+<p>&nbsp;</p>
+<p>windowIconified：窗口最小化时触发</p>
+</td>
+</tr>
+<tr>
+<td>ContainerEvent&nbsp; &nbsp;容器事件</td>
+<td>往容器中添加、移除组件时触发</td>
+<td>ContainerListener　　</td>
+<td>ContainerAdapter</td>
+<td>
+<p>componentAdded:往容器中添加组件时触发</p>
+<p>componentRemoved：从容器中移除组件时触发</p>
+</td>
+</tr>
+<tr>
+<td>ComponentEvent&nbsp; 组件事件</td>
+<td>
+<p>Componet size changed：组件的尺寸发生变化、</p>
+<p>Positions changed：位置发生改变、</p>
+<p>Hide or show component：组件被隐藏/显示时触发</p>
+</td>
+<td>&nbsp;ComponentListener</td>
+<td>&nbsp;ComponentAdapter</td>
+<td>
+<p>componentResized：组件尺寸发生变化时触发</p>
+<p>componentMoved：组件的位置发生改变时触发</p>
+<p>componentHidden：组件被隐藏时触发</p>
+<p>componentShown：组件被显示时触发</p>
+</td>
+</tr>
+<tr>
+<td>PaintEvent&nbsp; 组件绘制事件</td>
+<td>调用组件的paint()/update()来绘制时触发</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+
+<h3><span id="implements-listener">Implements Listener</span></h3><p>1.Inner Class：内部类<br>2.Anonymous Inner Class：匿名内部类<br>3.Outer Class：外部类(如实例化)<br>4.Class itself by Implement Interface or Extends Adapter Class and override its methods (Not Approved);类自身通过继承复写适配器或者继承监听器接口的方式（不推荐）</p>
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
+    </article>
+    <div class="article-content mdui-container mdui-center mdui-shadow-12">
+      
+    <div class="mdui-center">
+        <div class="mdui-center">
+            <article class="mdui-typo">
+                <h2>评论</h2>
+                <div class="comment"></div>
+            </article>
+        </div>
+    </div>
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+	new Valine({
+		av: AV,
+		el: '.comment',
+		app_id: 'AKX2PaxQ42S8E1ajsYWIX9S6-gzGzoHsz',
+		app_key: 'eRIvGfNJ5jQIRb48RbOQedRH',
+		notify: true, //评论提醒
+		verify: true, //验证码
+		avatar: 'retro',
+		placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+	});
+</script>
+
+    </div>
   </div>
 </div>
-</br></br></br>
+
   </div>
   <!--footer-->
   <footer class="mdui-color-indigo">
