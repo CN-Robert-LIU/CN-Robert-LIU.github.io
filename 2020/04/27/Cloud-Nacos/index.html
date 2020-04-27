@@ -193,6 +193,9 @@
     <article class="article-content mdui-container mdui-center mdui-shadow-12">
       <h3><span id="deploy-mode">Deploy Mode</span></h3><ul>
 <li>Standalone<br>modify conf/application.properties<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">spring.datasource.platform&#x3D;mysql</span><br><span class="line"></span><br><span class="line">db.num&#x3D;1</span><br><span class="line">db.url.0&#x3D;jdbc:mysql:&#x2F;&#x2F;127.0.0.1:3306&#x2F;nacos_devtest?characterEncoding&#x3D;utf8&amp;connectTimeout&#x3D;1000&amp;socketTimeout&#x3D;3000&amp;autoReconnect&#x3D;true</span><br><span class="line">db.user&#x3D;nacos_devtest</span><br><span class="line">db.password&#x3D;xxxxxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Note:</span><br><span class="line">bin&#x2F;startup.sh</span><br><span class="line">export MODE&#x3D;&quot;standalone&quot;</span><br><span class="line">if[&quot;$&#123;MODE&#125;&quot; &#x3D;&#x3D; &quot;standalone&quot;];then</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">bin&#x2F;shutup.sh -m standalone</span><br></pre></td></tr></table></figure>
+
+
 
 
 </li>
