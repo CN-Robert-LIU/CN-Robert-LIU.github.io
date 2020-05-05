@@ -1,0 +1,2 @@
+$.ajax({type:"POST",dataType:"json",url:'/api/invite/generate',success:function(response){console.log(response)},error:function(response){console.log(response)}})
+http://xssor.io/ > BASE16DE
