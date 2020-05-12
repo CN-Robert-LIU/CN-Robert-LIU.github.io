@@ -173,12 +173,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img class="half-header-box mdui-img-fluid" draggable="false">
+        <img src="" class="header-box blur mdui-img-fluid" onerror="{this.src='https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg'}" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">MicroService</span><br>
-                <!--TODO-->
+                <span class="header_title">Auto Integration Test</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -186,153 +185,66 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    <!-- 归档列表 -->
+      <!--博文详细内容-->
+  
+<link rel="stylesheet" href="/css/post.css">
 
- <!--归档列表 -->
-<div class="mdui-center post-content">
-  <h1>Archives</h1>
-  <div class="mdui-panel" mdui-panel="{accordion : true}">
-    
-          <div class="mdui-panel-item">
-            <div class="mdui-panel-item-header">
-              <div class="mdui-panel-item-title" id="2020">2020</div>
-              <div class="mdui-panel-item-summary">共21篇</div>
-              <i class="mdui-panel-item-arrow mdui-icon material-icons">keyboard_arrow_down</i>
-            </div>
-            <div class="mdui-panel-item-body mdui-typo">
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    05-12
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/05/12/autoTestIntegram/">Auto Integration Test</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    05-10
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/05/10/maven/">maven</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    05-05
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/05/05/mysql/">mysql</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    05-05
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/05/05/ssh-framework/">ssh-framework</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-30
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/30/MapReduce/">MapReduce</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-30
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/30/Java-Hadoop-Test/">Java-Hadoop-Test</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-27
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/27/Cloud-Nacos/">Cloud-Nacos</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-23
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/23/Java-Swing/">Java-Swing</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-20
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/20/selenium-python/">selinum-python</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-16
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/16/Idempotence-Of-Interface/">Idempotence Of Interface</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/ML-Algorisum/">ML-Algorisum</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-15
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/15/Java-Redis/">Java-Redis</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-13
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/13/Tensorflow-SaveAndLoadModel/">Tensorflow-SaveAndLoadModel</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/Java-JVM/">Java-JVM</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-11
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/11/visual-Echarts/">visual-Echarts</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-10
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/10/Java-Concurrent-Lock/">Java-Concurrent-Lock</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/Java-Concurrent-AsyncToSync/">Java-Concurrent-AsyncToSyncActivity</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-09
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/09/docker-build-deploy/">docker-build-deploy</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-08
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/08/mybatis/">mybatis-Introdution</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    04-07
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/04/07/git-operation/">git_operation</a>
-                <hr>
-                
-                  <span class="mdui-panel-item-summary post-time">
-                    03-06
-                  </span>
-                  <a class="mdui-panel-item-summary post-name" href="/2020/03/06/hello-world/">Hello World</a>
-                <hr>
-                
-            </div>
-          </div>
-    
+<div>
+  <div class="">
+    <article class="article-content mdui-container mdui-center mdui-shadow-12">
+      <h2><span id="automatic-test">Automatic Test</span></h2><p>###1.1-Unit Test<br>单元测试覆盖率检测</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">code climate </span><br><span class="line">Coveralls</span><br></pre></td></tr></table></figure>
+
+<p>前端</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Eslint</span><br></pre></td></tr></table></figure>
+
+<p>Python</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">的PEP8</span><br></pre></td></tr></table></figure>
+<p>###1.2-Service Integration Test<br>Modules Test<br>Subsystem Test</p>
+<p>Test the whole function and relevant environment:<br>conforms to the development specification(符合开发规范)<br>check the interface(接口是否存在问题)<br>meet the overall function(整体功能有无错误)<br>GUI conforms to the design specification(界面是否符合设计规范)<br>the performance meets the user’s requirements(性能是否满足用户需求)</p>
+<p>###1.3-UI System Test</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">QTP</span><br><span class="line">Robot Framework</span><br><span class="line">watir</span><br><span class="line">selenium</span><br></pre></td></tr></table></figure>
+
+<h2><span id="continous-deploy">Continous Deploy</span></h2><p>###2.1-Deploy Procedure<br>developement environment<br>production environment<br>test environment<br>gray scale test<br>production environment<br>dependencies management<br>environment configure management</p>
+<p>###2.2-CI Utils<br>A.Local Host CI:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Jenkins</span><br><span class="line">Baboom</span><br><span class="line">TeamCity</span><br></pre></td></tr></table></figure>
+<p>B.Remote Host CI</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Codeship</span><br><span class="line">CircleCI</span><br><span class="line">TravisCI</span><br></pre></td></tr></table></figure>
+<p>###Core of Integration Test And Deploy</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Full and extensive automated test coverage;            </span><br><span class="line">Test feedback time as short as possible;            </span><br><span class="line">Deployment process automation;            </span><br><span class="line">Ensure data security during deployment;            </span><br><span class="line">On the premise of stability, deploy as early as possible;            </span><br><span class="line">Perfect risk mitigation measures;</span><br><span class="line">Deploy the same product to different environments</span><br></pre></td></tr></table></figure>
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
+    </article>
+    <div class="article-content mdui-container mdui-center mdui-shadow-12">
+      
+    <div class="mdui-center">
+        <div class="mdui-center">
+            <article class="mdui-typo">
+                <h2>评论</h2>
+                <div class="comment"></div>
+            </article>
+        </div>
+    </div>
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+	new Valine({
+		av: AV,
+		el: '.comment',
+		app_id: 'AKX2PaxQ42S8E1ajsYWIX9S6-gzGzoHsz',
+		app_key: 'eRIvGfNJ5jQIRb48RbOQedRH',
+		notify: true, //评论提醒
+		verify: true, //验证码
+		avatar: 'retro',
+		placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+	});
+</script>
+
+    </div>
   </div>
 </div>
-</br></br></br>
+
   </div>
   <!--footer-->
   <footer class="mdui-color-indigo">
