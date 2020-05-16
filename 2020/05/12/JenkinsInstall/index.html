@@ -173,11 +173,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg" class="header-box mdui-img-fluid" draggable="false">
+        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/jenkins.png" class="header-box blur mdui-img-fluid" onerror="{this.src='https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg'}" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">Blog for Robert.LIU</span><br>
+                <span class="header_title">JenkinsInstall</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -185,110 +185,77 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    
-<!--Index-->
-<div class="mdui-center" style="width:95%;max-width:550pt;">
-      <h3>Recent Posts</h3>
-</div>
+      <!--博文详细内容-->
+  
+<link rel="stylesheet" href="/css/post.css">
 
-  <div id="recent-posts" class="mdui-center">
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://mybatis.org/images/mybatis-logo.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">mybatis-Introdution</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+<div>
+  <div class="">
+    <article class="article-content mdui-container mdui-center mdui-shadow-12">
+      <p>A.Tomcat<br>B.JDK<br>C.Jenkins(.war)</p>
+<p>##Define Config For Install<br>1.Launch Port<br>apache-tomcat/conf/server.xml</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Connector</span> <span class="attr">port</span>=<span class="string">"8095"</span> <span class="attr">protocol</span>=<span class="string">"HTTP/1.1"</span></span></span><br><span class="line"><span class="tag">           <span class="attr">connectorTimeout</span>=<span class="string">"20000"</span></span></span><br><span class="line"><span class="tag">		   <span class="attr">redirectorPort</span>=<span class="string">"8443"</span> <span class="attr">URIEncoding</span>=<span class="string">"UTF-8"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-04-08
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/04/08/mybatis/" style="float:right;">去围观</a>
-            
-        </div>
-      </div>
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://git-scm.com/images/logo@2x.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">git_operation</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+<p>2.apache-tomcat/conf/server.xml</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">Context</span>&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Default set of monitored resources. If one of these changes, the    --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- web application will be reloaded.                                   --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WatchedResource</span>&gt;</span>WEB-INF/web.xml<span class="tag">&lt;/<span class="name">WatchedResource</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">WatchedResource</span>&gt;</span>$&#123;catalina.base&#125;/conf/web.xml<span class="tag">&lt;/<span class="name">WatchedResource</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">Resources</span> <span class="attr">cachingAllowed</span>=<span class="string">"true"</span> <span class="attr">cacheMaxSize</span>=<span class="string">"100000"</span> /&gt;</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">&lt;!-- Uncomment this to disable session persistence across Tomcat restarts --&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--</span></span><br><span class="line"><span class="comment">    &lt;Manager pathname="" /&gt;</span></span><br><span class="line"><span class="comment">    --&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">Context</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>3.server User<br>apache-tomcat/conf/tomcat-users.xml</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-gui"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-script"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-jmx"</span> /&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">role</span> <span class="attr">rolename</span>=<span class="string">"manager-status"</span> /&gt;</span></span><br><span class="line"><span class="comment">&lt;!--  Define Username And Passwd  --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">user</span> <span class="attr">username</span>=<span class="string">"username"</span> <span class="attr">password</span>=<span class="string">"passwd"</span></span></span><br><span class="line"><span class="tag"><span class="attr">roles</span>=<span class="string">"manager-gui,manager-script,manager-jmx,manager-status"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-04-07
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/04/07/git-operation/" style="float:right;">去围观</a>
-            
-        </div>
-      </div>
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/HelloWorld.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">Hello World</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+<p>##Defien Git/Maven/JDK/SVN repository<br>|Name|Plugin|<br>|:-:|:-:|<br>|SVN|Subversion Plug-in|<br>|Deploy|Deploy to container|</p>
+<p>##Project SVN Setting</p>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># create project folder</span></span><br><span class="line">mkdir projectName</span><br><span class="line"><span class="comment"># Create SVN Authority</span></span><br><span class="line">svnadmin create projectName</span><br></pre></td></tr></table></figure>
+<p>./projectName/svnsver.conf</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[general]</span><br><span class="line"># Anonymous Access</span><br><span class="line">anon-access &#x3D; none</span><br><span class="line">auth-access &#x3D; write</span><br><span class="line"># User PWD</span><br><span class="line">passwd-db &#x3D; passwd</span><br><span class="line"># Auth</span><br><span class="line">authz-db &#x3D; authz</span><br></pre></td></tr></table></figure>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-03-06
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/03/06/hello-world/" style="float:right;">去围观</a>
-            
+<p>./projectName/passwd</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[user]</span><br><span class="line">username &#x3D; passwd</span><br></pre></td></tr></table></figure>
+<p>./projectName/authz</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">[groups]</span><br><span class="line">[&#x2F;]</span><br><span class="line">username &#x3D; rw</span><br><span class="line">* &#x3D;</span><br></pre></td></tr></table></figure>
+
+<p>Make sure repository at latest<br>SVN path(root as pom) @HEAD</p>
+<p>##Build (Building Environment)<br>Invoke top-level Maven targets</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Maven Version: MyMaven</span><br><span class="line">Goals: clean install</span><br></pre></td></tr></table></figure>
+
+<p>##Deploy War To Browser</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">WAR&#x2F;EAR files: xxx-xxx.war</span><br><span class="line">Context path: projectName</span><br><span class="line">Containers(Add Container--Version (Tomcat...)):</span><br><span class="line">Credentials: Add </span><br><span class="line">        username</span><br><span class="line">        passwd</span><br><span class="line">Tomcat Url:	http:&#x2F;&#x2F;ipaddress:port&#x2F;projectName</span><br></pre></td></tr></table></figure>
+
+<p>##Add Project Hook(./hooks/post-commit)</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"># curl -X post -v -u [Jenkins User]:[Jenkins passwd] -H &quot;Request Header&quot; &quot;http:&#x2F;&#x2F;[sever IP]:[server PORT]&#x2F;jenkins&#x2F;jon&#x2F;[Jenkins ProjectName]&#x2F;build？token&#x3D;[Token Code]&quot;</span><br><span class="line">curl -X post -v -uadmin:passwd http:&#x2F;&#x2F;ipaddress:port&#x2F;jenkins&#x2F;job&#x2F;projectName&#x2F;buld?token&#x3D;ATGUIGUY_TOKEN</span><br></pre></td></tr></table></figure>
+
+<p><a href="http://admin:[passwd]@IPadress:PORT/jenkins/crumbIssuer/api/xml">http://admin:[passwd]@IPadress:PORT/jenkins/crumbIssuer/api/xml</a></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version="1.0" encoding="ISO-8859-1"?&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">defaultCrumbIssuer</span> <span class="attr">_class</span>=<span class="string">"hudson.security.csrf.DefaultCrumbIssuer"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">crumb</span>&gt;</span>ATGUIGUY_TOKEN<span class="tag">&lt;/<span class="name">crumb</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">crumbRequestField</span>&gt;</span>Jenkins-Crumb<span class="tag">&lt;/<span class="name">crumbRequestField</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">defaultCrumbIssuer</span>&gt;</span></span><br></pre></td></tr></table></figure>
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
+    </article>
+    <div class="article-content mdui-container mdui-center mdui-shadow-12">
+      
+    <div class="mdui-center">
+        <div class="mdui-center">
+            <article class="mdui-typo">
+                <h2>评论</h2>
+                <div class="comment"></div>
+            </article>
         </div>
-      </div>
-    
+    </div>
+
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+	new Valine({
+		av: AV,
+		el: '.comment',
+		app_id: 'AKX2PaxQ42S8E1ajsYWIX9S6-gzGzoHsz',
+		app_key: 'eRIvGfNJ5jQIRb48RbOQedRH',
+		notify: true, //评论提醒
+		verify: true, //验证码
+		avatar: 'retro',
+		placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+	});
+</script>
+
+    </div>
   </div>
-
-
-
-<!--页码-->
-<div id="paginator">
-  <a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
 </div>
-</br>
 
   </div>
   <!--footer-->

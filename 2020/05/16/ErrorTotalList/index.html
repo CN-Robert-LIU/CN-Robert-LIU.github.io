@@ -173,11 +173,11 @@
 <header>
     <div class="mdui-card-media" style="overflow: hidden;">
         
-        <img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg" class="header-box mdui-img-fluid" draggable="false">
+        <img src="" class="header-box blur mdui-img-fluid" onerror="{this.src='https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/bg_blog.jpg'}" draggable="false">
         
             <div class="header-content">
                 
-                <span class="header_title">Blog for Robert.LIU</span><br>
+                <span class="header_title">ErrorTotalList</span><br>
                 
                 <p id="hitokoto">Loading Quotes ......</p>
             </div>
@@ -185,110 +185,57 @@
 </header>
 
 <div class="mdui-center" id="content-inner" style="width:95%; max-width:700pt;">
-    
-<!--Index-->
-<div class="mdui-center" style="width:95%;max-width:550pt;">
-      <h3>Recent Posts</h3>
-</div>
+      <!--博文详细内容-->
+  
+<link rel="stylesheet" href="/css/post.css">
 
-  <div id="recent-posts" class="mdui-center">
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://mybatis.org/images/mybatis-logo.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">mybatis-Introdution</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+<div>
+  <div class="">
+    <article class="article-content mdui-container mdui-center mdui-shadow-12">
+      <ul>
+<li><a href="#PIP">PIP</a></li>
+</ul>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-04-08
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/04/08/mybatis/" style="float:right;">去围观</a>
-            
-        </div>
-      </div>
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://git-scm.com/images/logo@2x.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">git_operation</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+<p><a id="PIP"></a><br>###PIP</p>
+<ul>
+<li>keyrings.alt</li>
+</ul>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-04-07
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/04/07/git-operation/" style="float:right;">去围观</a>
-            
+<p>1.Error Descirption(keyrings.alt):</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">Error initializing plugin EntryPoint(name&#x3D;&#39;Windows (alt)&#39;, value&#x3D;&#39;keyrings.alt.Windows&#39;, group&#x3D;&#39;keyring.backends&#39;)</span><br></pre></td></tr></table></figure>
+<p>···sh<br>pip3 install –upgrade keyrings.alt<br>···</p>
+      <!-- <h2><span id="approve">Approve</span></h2><div align="center"><img src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/alipay_in.jpg" width="30%" height="30%"></div> -->
+    </article>
+    <div class="article-content mdui-container mdui-center mdui-shadow-12">
+      
+    <div class="mdui-center">
+        <div class="mdui-center">
+            <article class="mdui-typo">
+                <h2>评论</h2>
+                <div class="comment"></div>
+            </article>
         </div>
-      </div>
-    
-      <div id="post-item" class="mdui-shadow-1 mdui-center mdui-ripple mdui-hoverable">
-        <!--图片或视频部分-->
-        <div class="mdui-card-media">
-          
-            <img class="img_item mdui-img-fluid" src="https://cdn.jsdelivr.net/gh/CN-Robert-LIU/images@master/blog/images/HelloWorld.png" onerror="{this.src=''}" draggable="false">
-            <div class="mdui-card-media-covered mdui-card-media-covered-gradient">
-              <div class="mdui-card-primary">
-                  <div class="title_font float_left mdui-card-primary-title">Hello World</div>
-              </div>
-            </div>
-            
-        </div>
-        <!--描述-->
-        <div class="mdui-card-actions">
-          
+    </div>
 
-          
-          
-          <div class="mdui-divider"></div>
-            <span class="info">
-              <i class="mdui-icon material-icons">access_time</i>
-              2020-03-06
-            </span>
-            
-              <a class="info mdui-text-color-pink " href="/2020/03/06/hello-world/" style="float:right;">去围观</a>
-            
-        </div>
-      </div>
-    
+
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script>
+	new Valine({
+		av: AV,
+		el: '.comment',
+		app_id: 'AKX2PaxQ42S8E1ajsYWIX9S6-gzGzoHsz',
+		app_key: 'eRIvGfNJ5jQIRb48RbOQedRH',
+		notify: true, //评论提醒
+		verify: true, //验证码
+		avatar: 'retro',
+		placeholder: 'ヾﾉ≧∀≦)o来啊，快活啊!'
+	});
+</script>
+
+    </div>
   </div>
-
-
-
-<!--页码-->
-<div id="paginator">
-  <a class="extend prev" rel="prev" href="/page/2/">&lt;</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
 </div>
-</br>
 
   </div>
   <!--footer-->
